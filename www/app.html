@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Doctum Gestão</title>
+  <title>Agenda Escolar</title>
 <script src="./cordova.js"></script> 
   <script src="lib/onsen/js/onsenui.js"></script>
    <script src="js/config.js"></script>
@@ -79,7 +79,7 @@
             <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center" id="tituloApp">Doctum .::. Gestão</div>
+        <div class="center" id="tituloApp">Agenda .::. Escolar</div>
         
         <div class="right">
                    <!-- Toolbar-button  only visible for iOS/other. -->
@@ -99,17 +99,20 @@
       -->
       <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
       
-      <ons-tabbar id="myTabbar" position="bottom">
-       <!--  <ons-tab id='activehome' page="html/home_page.html"  active label="Home" ><ons-icon size="30px" icon="fa-home"></ons-icon>
+      <ons-tabbar id="myTabbar" swipeable position="bottom">
+
+        <ons-tab id='activehome' page="html/home_page.html"  active label="Home"  icon="fa-home">
         </ons-tab>
-      -->
-        <ons-tab id='activependente'  active page="html/pending_tasks.html"><ons-icon size="30px" icon="fa-check-circle"></ons-icon>
+
+        <ons-tab id='activependente' label="Agenda"  page="html/page_agenda.html" icon="fa-check-circle">
         </ons-tab>
-        <ons-tab id='activehome' page="html/home_page.html" label="Info" ><ons-icon size="30px" icon="md-info"></ons-icon>
+        <ons-tab id='activeNotas' page="html/page_notas.html" label="Notas"  icon="md-info">
         </ons-tab>
-       <!--   <ons-tab id='activeconcluido' page="html/completed_tasks.html" label="Autorizações"><ons-icon size="30px" icon="fa-archive"></ons-icon>
+        <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro"  icon="md-info">
         </ons-tab>
-      -->
+        <ons-tab id='activeconcluido' page="html/page_bilhetes.html" label="Bilhetes"  icon="fa-archive">
+        </ons-tab>
+
        <!-- <ons-tab page="html/info.html"><ons-icon size="30px" icon="md-info"></ons-icon>
         </ons-tab>
       -->

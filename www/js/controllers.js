@@ -9,6 +9,7 @@ myApp.controllers = {
   //////////////////////////
   tabbarPage: function(page) {
     // Set button functionality to open/close the menu.
+
     page.querySelector('[component="button/menu"]').onclick = function() {
       document.querySelector('#mySplitter').left.toggle();
     };
@@ -29,13 +30,26 @@ myApp.controllers = {
   ////////////////////////
   // HOME Page Controller //
   ////////////////////////
-  homePage: function(page) {
+  pageFinanceiro: function(page) {
+    ons.notification.alert("ok");
     $('#login_user').html("Usuário:<br/>"+localStorage.getItem('sys_username'));
 
     $('#login_nome').html("Nome:<br/>"+localStorage.getItem('sys_nome'));
 
     $('#login_email').html("Email:<br/>"+localStorage.getItem('sys_email'));
     
+    //;
+    //localStorage.getItem('login_email');
+
+  },
+
+  homePage: function(page) {
+    $('#login_user').html("Usuári:<br/>"+localStorage.getItem('sys_username'));
+
+    $('#login_nome').html("Nome:<br/>"+localStorage.getItem('sys_nome'));
+
+    $('#login_email').html("Email:<br/>"+localStorage.getItem('sys_email'));
+
     //;
     //localStorage.getItem('login_email');
 

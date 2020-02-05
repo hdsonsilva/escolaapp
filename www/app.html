@@ -15,6 +15,7 @@
   
   <script src="./js/view_boletos.js"></script>
   <script src="./js/view_bilhetes.js"></script>
+  <script src="./js/view_agenda.js"></script>
 
   <script src="./js/function.js"></script>
   <script src="./js/push.js"></script>
@@ -29,7 +30,7 @@
   <script>
     var auth_check = 0 ;
 
-    ////////////////////// EVENTOS SHOW PAGE //////////////////////////////////Q
+    ////////////////////// CONTROLADOR //////////////////////////////////
 
 
       //Atualizando a lista de tarefas para o usuario
@@ -55,15 +56,15 @@
         else if(event.target.matches('#pageBilhetes')){
           buscaAcoes('bilhetes');
         }
+        //Se estiver na pagina Bilhetes
+        else if(event.target.matches('#pageAgenda')){
+          buscaAcoes('agenda');
+        }
 
 
       }, false);
 
-      document.addEventListener('click', function(event){
-        if (event.target.matches('#activeBilhetes')) {
-          ons.notification.alert('ok');
-        }
-      });
+      
     $(document).ready(function(){
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
       
@@ -105,12 +106,13 @@
             <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center" id="tituloApp">Agenda .::. Escolar</div>
+        <div class="center" id="tituloApp">.:: Agenda Escolar::.</div>
         
         <div class="right">
                    <!-- Toolbar-button  only visible for iOS/other. -->
           <ons-toolbar-button id="buttonreload" component="buttonreload">
-            <ons-icon icon="fa-undo"></ons-icon>
+            <!--<ons-icon icon="fa-undo"></ons-icon>-->
+            <img src='./img/LogoSemNome100x153.png' height='96%'>
           </ons-button>
         </div>
       </ons-toolbar>

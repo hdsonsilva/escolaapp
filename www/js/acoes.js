@@ -46,4 +46,7 @@ function retornoAcao(acao, retorno){
     else if(acao == 'bilhetes'){
         view_bilhetes(retorno);
     }
+    else if(acao == 'agenda'){
+        view_agenda(retorno);
+    }
 }

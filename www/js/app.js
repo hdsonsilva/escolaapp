@@ -1,5 +1,7 @@
 // App logic.
-window.myApp = {};
+window.myApp = {
+
+};
 
 document.addEventListener('init', function(event) {
   var page = event.target;
@@ -16,7 +18,7 @@ document.addEventListener('init', function(event) {
       && document.querySelector('#pendingTasksPage')
       && !document.querySelector('#pendingTasksPage ons-list-item')
     ) {
-      
+      //Faz nada
       
     }
   }

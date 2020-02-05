@@ -31,12 +31,15 @@ myApp.controllers = {
   // HOME Page Controller //
   ////////////////////////
   pageFinanceiro: function(page) {
-    ons.notification.alert("ok");
-    $('#login_user').html("Usuário:<br/>"+localStorage.getItem('sys_username'));
+    //ons.notification.alert("Alerta do controlador pageFinanceiro");
+    /*$('#login_user').html("Usuário:<br/>"+localStorage.getItem('sys_username'));
 
     $('#login_nome').html("Nome:<br/>"+localStorage.getItem('sys_nome'));
 
     $('#login_email').html("Email:<br/>"+localStorage.getItem('sys_email'));
+    */
+
+
     
     //;
     //localStorage.getItem('login_email');

@@ -12,6 +12,10 @@
   <script src="js/controllers.js"></script>
   <script src="./js/login.js"></script>
   <script src="./js/acoes.js"></script>
+  
+  <script src="./js/view_boletos.js"></script>
+  <script src="./js/view_bilhetes.js"></script>
+
   <script src="./js/function.js"></script>
   <script src="./js/push.js"></script>
   <script src="./js/background.js"></script>
@@ -30,24 +34,46 @@
 
       //Atualizando a lista de tarefas para o usuario
       document.addEventListener('show', function(event) {
-        if (event.target.matches('#pendingTasksPage')) {
+        //Verifica a pagina selecionada
+        if (event.target.matches('#pendingTasksPage1')) {
           //////////////////////////////////////////////////////////
           //buscaAcoes();
-          exibeMensagem( 'tarefas' );
+          //exibeMensagem( 'tarefas' );
           //////////////////////// Recarregando pagina///////////////////////////////
           $('#buttonreload').unbind('click');
           $('#buttonreload').click(function(){
-            buscaAcoes();
+            buscaAcoes(1);
           });
           ////////////////////////////////////////////////////////////
         }
+        //Se estiver na pagina Financeiro
+        else if(event.target.matches('#pageFinanceiro')){
+          buscaAcoes('boletos');
+        }
+
+         //Se estiver na pagina Bilhetes
+        else if(event.target.matches('#pageBilhetes')){
+          buscaAcoes('bilhetes');
+        }
+
+
       }, false);
+
+      document.addEventListener('click', function(event){
+        if (event.target.matches('#activeBilhetes')) {
+          ons.notification.alert('ok');
+        }
+      });
     $(document).ready(function(){
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
       
       verifica_auth();
       setInterval(verifica_auth, localStorage.getItem( 'app_timeverify_auth' ));
-      
+
+      ///////////
+      $('#activeFinanceiro').click(function(){
+          ons.notification.alert('teste');
+      });
     });
 
   </script>
@@ -104,18 +130,16 @@
         <ons-tab id='activehome' page="html/home_page.html"  active label="Home"  icon="fa-home">
         </ons-tab>
 
-        <ons-tab id='activependente' label="Agenda"  page="html/page_agenda.html" icon="fa-check-circle">
+        <ons-tab id='activeAgenda' label="Agenda" page="html/page_agenda.html" icon="fa-calendar">
         </ons-tab>
-        <ons-tab id='activeNotas' page="html/page_notas.html" label="Notas"  icon="md-info">
+        <ons-tab id='activeNotas' page="html/page_notas.html" label="Notas" icon="fa-address-book">
         </ons-tab>
-        <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro"  icon="md-info">
+        <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro" icon="fa-credit-card">
         </ons-tab>
-        <ons-tab id='activeconcluido' page="html/page_bilhetes.html" label="Bilhetes"  icon="fa-archive">
+        <ons-tab id='activeBilhetes' page="html/page_bilhetes.html" label="Recados" icon="fa-comment">
         </ons-tab>
 
-       <!-- <ons-tab page="html/info.html"><ons-icon size="30px" icon="md-info"></ons-icon>
-        </ons-tab>
-      -->
+
       </ons-tabbar>
     </ons-page>
   </template>

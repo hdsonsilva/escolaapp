@@ -1,5 +1,5 @@
-var server1 = 'https://financeiro.doctum.edu.br/sicof/webservice/';
-var server = "http://localhost/escolaapp/";
+var server1 = 'https://sicof.doctum.edu.br/sicof/webservice/';
+var server = "https://sicof.doctum.edu.br/";
 
 //URL AUTENTICACAO
 var server_auth = server1 + 'logintoken.php';

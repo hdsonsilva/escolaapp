@@ -11,6 +11,11 @@ function exibeMensagem(page){
   }
 }
 
+function direcionar(url){
+
+  window.location.href = url;
+}
+
 function abrirURL( pagina ){
       if(debug == 1){
         window.open(pagina+"?token="+ localStorage.getItem("token") );
@@ -49,7 +54,7 @@ function abrirURL( pagina ){
                 }
                 else{
                  
-                  login( localStorage.getItem('login_username'),  localStorage.getItem('login_password'), 'app');
+                  login( localStorage.getItem('login_username'),  localStorage.getItem('login_password'), 'app',localStorage.getItem('login_unidade'), localStorage.getItem('login_nome'));
                   
                 }
                 //Exibindo o botao se o login der errado

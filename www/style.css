@@ -25,7 +25,41 @@ ons-splitter-side[side="left"][animation="overlay"] {
   font-size: 16px;
   color: #666
 }
+/*//////////////////////////////////////////////////*/
+/*Meus estilos*/
+.tituloInicial{
+  font-size: 12pt;
+  text-align: left;
+  color:#20457d;
+  margin-top: 5px;
+}
 
+.tituloInicialB{
+  font-size: 12pt;
+  text-align: left;
+  color:#20457d;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.font_tam1{
+  font-size: 11pt;
+  text-align: left;
+  color:#20457d; 
+  font-weight: 700;
+}
+
+.font_tam2{
+  font-size: 10pt;
+  text-align: left;
+  color:#20457d; 
+}
+
+.font_text{
+  font-size: 10pt;
+  text-align: left;
+  color:gray; 
+}
 
 
 /********************
@@ -33,7 +67,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
  ********************/
 
 #tabbarPage .list {
-  background-color: grey;
+  background-color: #eee;
   overflow-x: hidden;
   margin-top: -1px;
   border-bottom: 1px solid #ccc;

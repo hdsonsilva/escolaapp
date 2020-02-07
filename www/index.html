@@ -14,7 +14,7 @@
     <script src="lib/onsen/js/onsenui.js"></script>
       <!-- --------------- App init --------------- -->
 
-    <title>Doctum Gestão</title>
+    <title>Agenda Escolar</title>
 
     <style>
        
@@ -43,87 +43,112 @@
         color: gray;
      }
 
+     .positionbottom{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+     }
+     .centralizada{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); 
+
+     }
+
+     .paddingnosso{
+        padding: 30px;
+     }
+
+     ons-list-item, ons-list, ons-list-header, .page__content {
+        background: #f9f9f9 !important;
+     }
+
     </style>
 </head>
 <body>
-<ons-page  modifier="menu-page" >
+
     <!-- Cordova reference -->
     <script src="./js/config.js"></script>
     <script src="./cordova.js"></script> 
     <script src="./scripts/index.js"></script>
     <script src="./js/login.js"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/cadastro.js"></script>
     <script type="text/javascript">
     var auth_check ;
     auth_check = 0 ;
 
-    setInterval(function(){
-      if(auth_check == 1){
-        window.location.href = 'app.html';
-      }
-      else if(auth_check == -1){
-        //Exibindo o botao se o login der errado
-        auth_check = 0 ;
-        ons.notification.toast('DADOS INVÁLIDOS', {timeout: 3000});
-        $('#button').show();
-        $('#progress').hide();
-      }
-    },5000);
+    
     $(document).ready(function(){
 
-      
-      //localStorage.setItem('server_auth',"https://financeiro.doctum.edu.br/sicof/usuarios/logintoken.php" );
-
-      //Verificando se existem dados de usuario e senha salvos
-      if(localStorage.getItem('login_lembreme') == 1){
-
-        $('#input-lembreme').prop('checked','1');
-        $('#username').val(localStorage.getItem('login_username'));
-        $('#password').val(localStorage.getItem('login_password'));
-
+      if(localStorage.getItem('usuarios_salvos')){
+        exibir_usuarios(JSON.parse(localStorage.getItem('usuarios_salvos')));
       }
 
       // Fazendo login
-      $('#login').click( function(e) {
+      $('.1usuario').click( function(e) {
+        //Pega Usuario
+        buscarDadosUsuario($(this).attr('codigo'));
+        //Pega senha
+
+        //Loga no sistema
         auth_check = 0 ;
         //Escondendo botao no inicio do processo de login
         $('#button').hide();
         $('#progress').show();
-        login($('#username').val(),$('#password').val(), 'index');
+        login(localStorage.getItem('login_username'),localStorage.getItem('login_password'), 'index', localStorage.getItem('login_unidade'),  localStorage.getItem('login_nome'));
 
 
-    });
+        });
+
+      $('#newuser').click( function(){
+        window.location.href = './cadastrousuario.html';
+
+      });
   });
 
 
    
     </script>
 
-  <div class='fundo'>
-
-    <div class='login'>
-      <div class='interno'>
-      <br/>
-      <p style='margin-bottom: 40px;position:relative'>
+  <ons-page>
+   <ons-toolbar>
+    <div class="center">Agenda Escolar</div>
+  </ons-toolbar>
+  <div class='centralizada'>
+  <ons-list>
+    <ons-list-item>
+      <div style="width:100%;text-align: center;">
         <img src='./img/LogoSemNome100x153.png' width="17%">
-      </p>
-      <p style='margin-bottom: 40px;position:relative'>
-        <ons-input id="username"   modifier="underbar" placeholder="Usuário" float></ons-input>
-      </p>
-      <p style='margin-bottom: 40px;position:relative'>
-          <ons-input id="password"  modifier="underbar" type="password" placeholder="Senha" float></ons-input>
-      </p>
-      <p id='button'>
-          <ons-button id='login'>Entrar</ons-button>
-      </p>
-      <p id='progress' style="display:none";position:relative>
+      </div>
+    </ons-list-item>
+  </ons-list>
+  <ons-list id='exibicao_usuarios' class='paddingnosso'>
+    
+  </ons-list>
+  <ons-list>
+     <ons-list-item modifier="nodivider">
+      
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+       
+      <div style="width:100%;text-align: center;">
+        <p id='progress' style="display:none";position:relative>
           <ons-progress-bar indeterminate></ons-progress-bar>
       </p>
-      <p style='text-align: center;vertical-align: middle;position:relative'>
-         <ons-switch id="lembreme" input-id="input-lembreme"></ons-switch> Lembrar dados
-      </p>
+      
     </div>
-    </div>
-  </div>
+  </ons-list-item>
+  </ons-list>
+
+  <br />
+  
+</div>
+<div class='positionbottom'>
+    <ons-fab id="newuser">
+      <ons-icon icon="md-plus"></ons-icon>
+    </ons-fab>
+</div>
 </ons-page>
 
 </body>

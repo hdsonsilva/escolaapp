@@ -1,48 +1,26 @@
 <ons-page id="menuPage">
   
-  <ons-list-title>Links</ons-list-title>
+  <ons-list-title>Trocar</ons-list-title>
   <ons-list id="links">
+    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="direcionar('index.html')">
+      <div class="left">
+        <ons-icon icon="fa-exchange" style="color: grey;"></ons-icon>
+      </div>
+      <div class="center">
+        Outro Usuário
+      </div>
+    </ons-list-item>
+    <ons-list-title>Links</ons-list-title>
     <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirURL('https://sicof.doctum.edu.br/sicof/menu.php')">
       <div class="left">
         <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
       </div>
       <div class="center">
-        SITE INSTITUCIONAL 
+        Sistema Web
       </div>
     </ons-list-item>
-    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirURL('https://compras.doctum.edu.br/sicof/empresas/compras')">
-      <div class="left">
-        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
-      </div>
-      <div class="center">
-        SISTEMA WEB
-      </div>
-    </ons-list-item>
-    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirURL('https://sgo.doctum.edu.br/sicof/empresas/empenho')">
-      <div class="left">
-        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
-      </div>
-      <div class="center">
-        
-      </div>
-    </ons-list-item>
-    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirURL('https://sind.doctum.edu.br/sicof/empresas/renegociacao_2.0.1/')">
-      <div class="left">
-        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
-      </div>
-      <div class="center">
-        ALTERAR SENHA
-      </div>
-    </ons-list-item>
-    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="window.location.href = 'https://colaborador.doctum.edu.br'">
-      <div class="left">
-        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
-      </div>
-      <div class="center">
-        MEC
-      </div>
-    </ons-list-item>
-  </ons-list>
+    
+   
 
 <!--
   <ons-list-title>Default</ons-list-title>
@@ -67,7 +45,7 @@
   <ons-list-item tappable="" style="cursor: pointer" onclick="deslogar()" modifier="longdivider chevron" 
     >
       <div class="left">
-        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
+        <ons-icon icon="fa-sign-in" style="color: grey;"></ons-icon>
       </div>
       <div class="center" >
         Sair

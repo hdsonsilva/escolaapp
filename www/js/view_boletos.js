@@ -9,10 +9,11 @@ function view_boletos(retorno){
         conteudo_lista += "    <div class='expandable-content'></div>";
         conteudo_lista += "    </ons-list-item>";
 */
-        conteudo_lista += "<ons-card>Parcela "+(retorno[i]['Parcela'])+".::. Vencimento "+(retorno[i]['Vencimento']);
-        conteudo_lista += "<br>Emissao:" + retorno[i]['Emissao'];
-        conteudo_lista += "<br>Valor:" + retorno[i]['Valor Emitido'];
-        conteudo_lista += "<br>Pagamento:" + (retorno[i]['Pagamento'] == null ? "" : retorno[i]['Pagamento']);
+        conteudo_lista += "<ons-card><font class='font_tam1'>Parcela "+(retorno[i]['Parcela'])+".::. Vencimento "+(retorno[i]['Vencimento'])+"</font>";
+        conteudo_lista += "<br><font class='font_tam2'>Emissao:" + retorno[i]['Emissao']+"</font>";
+        conteudo_lista += "<br><font class='font_tam2'>Valor:" + retorno[i]['Valor Emitido']+"</font>";
+        conteudo_lista += "<br><font class='font_tam2'>Pagamento:" + (retorno[i]['Pagamento'] == null ? "" : retorno[i]['Pagamento'])+"</font>";
+        conteudo_lista += "<div class='right'; style='text-align:right;'><ons-button><ons-icon icon='fa-barcode'></ons-icon></ons-button> <ons-button ><ons-icon icon='fa-print'></ons-icon></ons-button></div>";
         conteudo_lista += "</ons-card>";
     }
 

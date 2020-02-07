@@ -27,6 +27,13 @@
 </head>
 
 <body>
+  <style>
+    .centralizada{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); 
+     }
+  </style>
   <script>
     var auth_check = 0 ;
 
@@ -59,6 +66,10 @@
         //Se estiver na pagina Bilhetes
         else if(event.target.matches('#pageAgenda')){
           buscaAcoes('agenda');
+        }
+        //Se estiver na pagina Bilhetes
+        else if(event.target.matches('#homePage')){
+          buscaAcoes('home');
         }
 
 
@@ -106,8 +117,7 @@
             <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center" id="tituloApp">.:: Agenda Escolar::.</div>
-        
+        <div class="center" id="tituloApp">Agenda Escolar</div>
         <div class="right">
                    <!-- Toolbar-button  only visible for iOS/other. -->
           <ons-toolbar-button id="buttonreload" component="buttonreload">
@@ -134,7 +144,7 @@
 
         <ons-tab id='activeAgenda' label="Agenda" page="html/page_agenda.html" icon="fa-calendar">
         </ons-tab>
-        <ons-tab id='activeNotas' page="html/page_notas.html" label="Notas" icon="fa-address-book">
+        <ons-tab id='activeNotas' page="html/page_notas.html" label="Acadêmico" icon="fa-address-book">
         </ons-tab>
         <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro" icon="fa-credit-card">
         </ons-tab>

@@ -46,6 +46,8 @@
      }
 
     </style>
+
+
 </head>
 <body>
 <ons-page  modifier="menu-page" >
@@ -78,10 +80,15 @@
     
     $(document).ready(function(){
 
+      $('#username, #password').focus(function(){
+          $('#imagemCadastro').hide(1000);
+      });
       
-      
+      $('#username, #password').blur(function(){
+          $('#imagemCadastro').show(1000);
+      });
 
-      // Fazendo login
+      // Cadastrando usuario, após autenticar login
       $('#login').click( function(e) {
         auth_check = 0 ;
         //Escondendo botao no inicio do processo de login
@@ -114,20 +121,26 @@
       <div class='interno'>
       
       <p style='margin-bottom: 40px;position:relative'>
+        <div id='imagemCadastro'>
         <img src='./img/LogoSemNome100x153.png' width="17%">
+      </div>
       </p>
+      
       <p style='margin-bottom: 40px;position:relative'>
         <ons-select id="unidade" onchange="editSelects(event)">
         <option value="escola_liber_ctga">Escola Liber Caratinga</option>
         <option value="escola_liber_ctga">Colégio Americano - Vitória</option>
       </ons-select>
       </p>
+      
       <p style='margin-bottom: 40px;position:relative'>
         <ons-input id="username"   modifier="underbar" placeholder="Usuário" float></ons-input>
       </p>
+      
       <p style='margin-bottom: 40px;position:relative'>
           <ons-input id="password"  modifier="underbar" type="password" placeholder="Senha" float></ons-input>
       </p>
+      
       <p id='button'>
           <ons-button id='login'>Cadastrar</ons-button>
       </p>

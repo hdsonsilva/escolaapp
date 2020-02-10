@@ -41,7 +41,7 @@
     <platform name="android">
          
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="./www/img/doctum800x800.png" />
+        <icon density="ldpi" src="./www/img/doctumctum800x800.png" />
         <icon density="mdpi" src="./www/img/doctum800x800.png" />
         <icon density="hdpi" src="./www/img/doctum800x800.png" />
         <icon density="xhdpi" src="./www/img/doctum800x800.png" />

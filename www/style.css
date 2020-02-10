@@ -27,6 +27,14 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 /*//////////////////////////////////////////////////*/
 /*Meus estilos*/
+
+ .align_direita {
+    text-align:right;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    padding-right: 4px;
+}
+
 .tituloInicial{
   font-size: 12pt;
   text-align: left;

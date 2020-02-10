@@ -6,8 +6,8 @@ var server_auth = server1 + 'logintoken.php';
 
 var server_action = server + 'testeretorno.php';
 
-var idonesignal = "e259628e-f324-44a2-a029-09d47774ef6d";
-var debug = 1 ; 
+var idonesignal = "4c03d205-c832-43ba-b816-c850b8773f04";
+var debug = 0 ; 
 
 
 var controle_mensagem_atualizar = 1;

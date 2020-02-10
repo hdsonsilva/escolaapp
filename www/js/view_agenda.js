@@ -1,6 +1,9 @@
 function view_agenda(retorno){
     var i ;
     var conteudo_lista = '';
+     //Alterando título do app
+    $('#tituloApp').html("Agenda");
+    //Preenchendo a lista com cards
     for(i  in retorno){
 
         conteudo_lista += "<ons-card><font class='font_tam1'>"+(retorno[i]['Data'])+"</font>";

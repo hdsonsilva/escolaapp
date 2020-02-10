@@ -1,11 +1,5 @@
 function buscaAcoes(acao){
-        //Acoes que nao solicitam dados 
-        if(acao == 'home'){
-            $('#idNome').html(localStorage.getItem("login_nome"));
-        }
-        //Todas as acoes que solicitam dados
-        else{
-
+        
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -38,7 +32,7 @@ function buscaAcoes(acao){
             dataType: 'json',
             async: true //Esperar retorno para continuar codigo
         });
-    }
+    
 
 }
 /*

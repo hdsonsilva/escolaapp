@@ -68,7 +68,17 @@ ons-splitter-side[side="left"][animation="overlay"] {
   text-align: left;
   color:gray; 
 }
+.positionbottom{
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+}
 
+.positionbottom2{
+        position: fixed;
+        bottom: 60px;
+        right: 15px;
+}
 
 /********************
  *** Animation CSS ***

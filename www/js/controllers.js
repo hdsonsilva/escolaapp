@@ -47,11 +47,7 @@ myApp.controllers = {
   },
 
   homePage: function(page) {
-    $('#login_user').html("Usuári:<br/>"+localStorage.getItem('sys_username'));
-
-    $('#login_nome').html("Nome:<br/>"+localStorage.getItem('sys_nome'));
-
-    $('#login_email').html("Email:<br/>"+localStorage.getItem('sys_email'));
+    
 
     //;
     //localStorage.getItem('login_email');

@@ -12,6 +12,6 @@ var debug = 0 ;
 
 var controle_mensagem_atualizar = 1;
 
-localStorage.setItem('app_timeverify_auth', 5000);
+localStorage.setItem('app_timeverify_auth', 10000);
 localStorage.setItem('server_auth', server_auth);
 localStorage.setItem('idonesignal', idonesignal);

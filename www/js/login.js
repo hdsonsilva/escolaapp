@@ -36,10 +36,10 @@ function login(usuario, senha, app_, unidade, nome){
 
               if(debug == 1){
                 
-                console.log(ret.token);
+                
               }
-
-              //setTimeout(direcionar, 1000, './app.html');
+              //console.log(ret.token);
+              setTimeout(direcionar, 1000, './app.html');
             }
 
             ok  = 1 ;

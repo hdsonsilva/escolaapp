@@ -9,6 +9,7 @@ function controle(event){
         'periodo_letivo': localStorage.getItem('periodoletivo'),
         'offset' : localStorage.getItem('offset_avisos')
       }
+      $('#homePageList').html('');
       buscaAcoes("alunos/api/mural/ver-avisos", dados, tipoenvio);
       
     }
@@ -19,6 +20,7 @@ function controle(event){
         'apitoken': localStorage.getItem('token'),
         'periodo_letivo': localStorage.getItem('periodoletivo')
       }
+      $('#pageFinanceiroList').html('');
       buscaAcoes("alunos/api/financeiro/boletos", dados, tipoenvio);
     }
 
@@ -37,6 +39,7 @@ function controle(event){
         'periodo_letivo': localStorage.getItem('periodoletivo'),
         'offset' : localStorage.getItem('offset_avisos')
       }
+      $('#pageBilhetesList').html('');
       buscaAcoes('alunos/api/mural/ver-recados',dados,tipoenvio);
     }
     
@@ -48,6 +51,7 @@ function controle(event){
         'periodo_letivo': localStorage.getItem('periodoletivo'),
         'offset' : localStorage.getItem('offset_avisos')
       }
+      $('#pageAgendaList').html('');
       buscaAcoes('alunos/api/mural/ver-agenda',dados,tipoenvio);
     }
    

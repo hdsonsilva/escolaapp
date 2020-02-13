@@ -9,7 +9,7 @@ function view_home(retornos){
     var retorno = retornos['murais'];
     var i ;
     var conteudo_lista = '';
-    
+ if(retornos['murais']){     
     //Preenchendo a lista com cards
     for(i  in retorno){
 
@@ -19,12 +19,17 @@ function view_home(retornos){
         conteudo_lista += "</ons-card>";
     }
 
-    $('#homePageItens').html(conteudo_lista);
+    $('#homePageList').html(conteudo_lista);
 
 
     $('.clicavelhome').click(function(){
         
-        abrirURL($(this).attr('valor'));
+        abrirURL($(this).attr('valor'), 1);
     });
+}
+else{
+    conteudo_lista += "<ons-card><font class='font_tam1'>Sem mais avisos</font></ons-card>";
+    $('#homePageList').html($('#homePageList').html()+conteudo_lista);
+}
 
 }

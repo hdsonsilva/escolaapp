@@ -35,11 +35,11 @@ function login(usuario, senha, app_, unidade, nome){
               localStorage.setItem('token',ret.token);
 
               if(debug == 1){
-                console.log(app_);
-                console.log("Entrou na parte de login e direciona para o app.");
+                
+                console.log(ret.token);
               }
 
-              setTimeout(direcionar, 1000, './app.html');
+              //setTimeout(direcionar, 1000, './app.html');
             }
 
             ok  = 1 ;

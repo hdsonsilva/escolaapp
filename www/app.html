@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="ISO-8859-1">
   <title>Agenda Escolar</title>
 <script src="./cordova.js"></script> 
   <script src="lib/onsen/js/onsenui.js"></script>
@@ -56,6 +56,10 @@
       
     $(document).ready(function(){
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
+
+      if(debug == 1){
+        console.log(localStorage.getItem('token'));
+      }
       
       verifica_auth();
       setInterval(verifica_auth, localStorage.getItem( 'app_timeverify_auth' ));
@@ -72,7 +76,7 @@
   <ons-navigator id="myNavigator" page="splitter.html"> 
   </ons-navigator>
 
-
+<input type='hidden' id='acao'>
   <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
   <template id="splitter.html">
     <ons-page>
@@ -133,6 +137,18 @@
       </ons-tabbar>
     </ons-page>
   </template>
+  <ons-dialog id="my-dialog">
+    <div style="text-align: center; padding: 10px;">
+      <p id='conteudodialog'>
+        
+      </p>
+
+      <p>
+        <ons-button onclick="document.getElementById('my-dialog').hide();">Fechar</ons-button>
+      </p>
+    </div>
+  </ons-dialog>
+
 <ons-modal direction="up">
   <div style="text-align: center">
     <p>

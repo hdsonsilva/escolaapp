@@ -80,6 +80,7 @@
 
       if(localStorage.getItem('usuarios_salvos')){
         exibir_usuarios(JSON.parse(localStorage.getItem('usuarios_salvos')));
+        $()
       }
 
       // Fazendo login
@@ -116,7 +117,7 @@
   <ons-list>
     <ons-list-item>
       <div style="width:100%;text-align: center;">
-        <img src='./img/LogoSemNome100x153.png' width="17%">
+        <img src='./img/LogoSemNome100x153.png' id='imagem' width="30%">
       </div>
     </ons-list-item>
   </ons-list>

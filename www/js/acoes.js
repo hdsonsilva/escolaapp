@@ -61,4 +61,8 @@ function retornoAcao(acao, retorno){
     else if(acao == 'alunos/api/mural/ver-avisos'){
      view_home(retorno);   
     }
+    else if(acao == 'alunos/api/notas/ver-notas'){
+     view_academico(retorno);   
+    }
+
 }

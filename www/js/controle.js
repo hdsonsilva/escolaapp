@@ -27,10 +27,15 @@ function controle(event){
     
     //Se estiver na pagina Academico
     else if(event.target.matches('#pageNotas')){
-      view_academico('academico');
-    }
+      dados = {
+        'apitoken': localStorage.getItem('token'),
+        'periodo_letivo': localStorage.getItem('periodoletivo'),
+        'offset' : localStorage.getItem('offset_avisos')
+      }
+      $('#pageNotasList').html('');
 
-    
+      buscaAcoes('alunos/api/notas/ver-notas',dados,tipoenvio);
+    }
 
      //Se estiver na pagina Bilhetes
     else if(event.target.matches('#pageBilhetes')){

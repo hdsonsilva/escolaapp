@@ -115,7 +115,7 @@ function exibir_usuarios(usuarios){
   item += "<ons-list-header>Usuários Cadastrados:</ons-list-header>";
   for(i in usuarios){
     
-    item+= "<ons-list-item modifier='chevron' tappable class='1usuario' codigo='"+(usuarios[i]['codigo'])+"'><div class='left'><img class='list-item__thumbnail' src='https://placekitten.com/g/40/40'></div><div class='center'>";
+    item+= "<ons-list-item modifier='chevron' tappable class='1usuario' codigo='"+(usuarios[i]['codigo'])+"'><div class='left'><img class='list-item__thumbnail' src='./img/quad.png'></div><div class='center'>";
     item+= "    <span class='list-item__title'>"+(usuarios[i]['nome'])+"</span><span class='list-item__subtitle'>"+(usuarios[i]['usuario'])+"</span></div>";
     item+= "</ons-list-item>";
 

@@ -10,6 +10,7 @@ function cadastro(unidade, usuario, senha, app_){
               type: 'POST',
               url : server1 + unidade + '/' + url_auth,
               cache: false,
+              timeout: 5000,
               data: {
                 'usuario'  : username,
                 'senha'  : password,
@@ -96,6 +97,11 @@ function cadastro(unidade, usuario, senha, app_){
                 ons.notification.toast(msg, {timeout: 3000});
                 $('#button').show();
               
+              },
+              error:function(e){
+                $('#progress').hide();
+                ons.notification.toast('Falha ao conectar. Verifique sua conexão.', {timeout: 3000});
+                $('#button').show();
               },
               dataType:'json',
               async: true

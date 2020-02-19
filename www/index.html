@@ -77,11 +77,16 @@
 
     
     $(document).ready(function(){
-
+      //Verificando usuarios salvos
       if(localStorage.getItem('usuarios_salvos')){
         exibir_usuarios(JSON.parse(localStorage.getItem('usuarios_salvos')));
 
       }
+      //Caso nao tenha usuários, direciona para tela de cadastro
+      else{
+        window.location.href = './cadastrousuario.html';
+      }
+
 
       // Fazendo login
       $('.1usuario').click( function(e) {

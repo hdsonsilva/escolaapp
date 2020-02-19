@@ -30,7 +30,7 @@ function login(usuario, senha, app_, unidade, nome){
             auth_check  = 1 ;
             
             if(app_ == 'index'){
-              ons.notification.toast('Login efetuado com sucesso.', {timeout: 3000});
+              ons.notification.toast('Login efetuado com sucesso.', {timeout: 1000});
                //Armazenando o token
               localStorage.setItem('token',ret.token);
 
@@ -50,9 +50,10 @@ function login(usuario, senha, app_, unidade, nome){
             if(app_ == 'app'){
               window.location.href = './index.html';
             }
-            if(debug == 1){
-                console.log("Entrou na parte de login e direciona para o index.");
-              }
+            ons.notification.toast('Erro ao fazer login.', {timeout: 2000});
+            $('#button').show();
+            $('#progress').hide();
+            
             auth_check = -1 ;
           
           }
@@ -60,6 +61,11 @@ function login(usuario, senha, app_, unidade, nome){
           //para carregar a lista de tarefas do usuarios, caso tenha dado falha antes
           //buscaAcoes();
         
+        },
+        error: function (e){
+          ons.notification.toast('Erro ao conectar. Verifique sua conexão.', {timeout: 2000});
+          $('#button').show();
+          $('#progress').hide();
         },
         dataType:'json',
         async: true

@@ -14,7 +14,7 @@ if(retornos['notas']){
         conteudo_lista += "<br><font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"</font>";
         conteudo_lista += "<br><font class='font_tam2 "+class_cor_nota+"'>Nota: " + retorno[i]['nota']+"</font>";
         conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";
-        conteudo_lista += "<div class='align_center'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon> Ver</ons-button> </div>";
+        conteudo_lista += "<div class='align_direita'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon> Ver</ons-button> </div>";
         conteudo_lista += "</ons-card>";
     }
     //Exibindo os boletos

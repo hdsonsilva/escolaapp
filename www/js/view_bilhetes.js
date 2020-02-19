@@ -34,6 +34,19 @@ function view_bilhetes(retornos){
             $('#bt_voltar_app').click(function(){
                 window.location.href = './app.html';
             });
+
+            $('#idcadastrarnovorecado').click(function(){
+
+                if($('#mensagemnovorecado').val() ==''){
+                    ons.notification.toast('Escreva a mensagem antes de enviar.',{'timeout':1500});
+                }
+                else{
+                    /*cadastrarnovobilhete($('#mensagemnovorecado').val());*/
+                    ons.notification.toast('Ainda em construção.',{'timeout':1500});
+                }
+
+            });
+
         }, 1000);
     });
 

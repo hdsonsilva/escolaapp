@@ -24,25 +24,27 @@ function view_bilhetes(retornos){
         conteudo_lista += "<ons-card><font class='font_tam1'>Sem  recados</font></ons-card>";
         $('#pageBilhetesList').html($('#pageBilhetesList').html()+conteudo_lista);
     }
-
+    /*Redirecionando para novo recado.. retirando evento click e criando novamente */
     $('#newrecado').unbind('click');
     $('#newrecado').click(function(){
         
         var myNavigator = document.getElementById('myNavigator');
         myNavigator.pushPage('html/page_novorecado.html');
+        /* Aguardando carregar a pagina para configurar os eventos após os elementso estarem carregados na tela*/
         setTimeout(function(){
+            /* Acao voltar para o app principal */
             $('#bt_voltar_app').click(function(){
                 window.location.href = './app.html';
             });
-
+            /*Acao enviar o recado digitado */
             $('#idcadastrarnovorecado').click(function(){
-
-                if($('#mensagemnovorecado').val() ==''){
+                $('#button').show();
+                /*Verificando se o recado foi digitado e possui mais de 10 caractere */
+                if($('#mensagemnovorecado').val() =='' || $('#mensagemnovorecado').val().length < 10 ){
                     ons.notification.toast('Escreva a mensagem antes de enviar.',{'timeout':1500});
                 }
                 else{
-                    /*cadastrarnovobilhete($('#mensagemnovorecado').val());*/
-                    ons.notification.toast('Ainda em construção.',{'timeout':1500});
+                    cadastronovamensagem($('#mensagemnovorecado').val());
                 }
 
             });

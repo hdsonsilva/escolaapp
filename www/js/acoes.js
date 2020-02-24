@@ -2,7 +2,7 @@ function buscaAcoes(acao,dados, tipo){
         
     //var unid = '';
        var unid = localStorage.getItem('unidade')+"/";
-       console.log(unid);
+       
         $.ajax({
             type: tipo,
             dataType: 'json',

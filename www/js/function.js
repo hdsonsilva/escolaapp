@@ -18,14 +18,15 @@ function direcionar(url){
 
 
 function abrirURL( pagina , sem_token){
-      /*if(!sem_token){
-         window.open(pagina);
+      
+      if(sem_token){
+         window.open(pagina,"_system");
         }
         else{
-          window.open(pagina+"?token="+localStorage.getItem("token"));
+          window.open(pagina+"?token="+localStorage.getItem("token"),"_system");
         }
 
-      */if(debug == 1){
+      /*if(debug == 1){
         window.open(pagina+"?token="+ localStorage.getItem("token") );
       }
       else{
@@ -36,7 +37,7 @@ function abrirURL( pagina , sem_token){
           navigator.app.loadUrl(pagina , { openExternal: true });
         }
       }
-      
+      */
 }
 
 function showModal(controle) {

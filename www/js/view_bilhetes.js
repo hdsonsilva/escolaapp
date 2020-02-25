@@ -8,7 +8,7 @@ function view_bilhetes(retornos){
         //Preenchendo a lista com cards
         for(i  in retorno){
 
-            conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelagenda' valor='"+(retorno[i]['url_destino'])+"'" :"")+"><font class='font_tam1'>"+(retorno[i]['data_referente'])+" - "+(retorno[i]['assunto'])+"</font>";
+            conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelbilhete' valor='"+(retorno[i]['url_destino'])+"'" :"")+"><font class='font_tam1'>"+(retorno[i]['data_referente'])+" - "+(retorno[i]['assunto'])+"</font>";
             conteudo_lista += "<br><br>";
             conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<img width='100%' src='"+(retorno[i]['arquivo'])+"'><br>" : "")+(retorno[i]['mensagem'])+"</font>";
             
@@ -24,6 +24,11 @@ function view_bilhetes(retornos){
         conteudo_lista += "<ons-card><font class='font_tam1'>Sem  recados</font></ons-card>";
         $('#pageBilhetesList').html($('#pageBilhetesList').html()+conteudo_lista);
     }
+
+    $('.clicavelbilhete').click(function(){
+    
+        abrirURL($(this).attr('valor'), 1);
+    });
     /*Redirecionando para novo recado.. retirando evento click e criando novamente */
     $('#newrecado').unbind('click');
     $('#newrecado').click(function(){

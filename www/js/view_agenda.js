@@ -22,7 +22,7 @@ if(retornos['murais']){
 
     $('.clicavelagenda').click(function(){
         
-        abrirURL($(this).attr('valor'));
+        abrirURL($(this).attr('valor'), 1);
     });
 }
 else{

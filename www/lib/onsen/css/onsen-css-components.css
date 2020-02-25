@@ -3982,7 +3982,7 @@ h4, h5, h6 {
 }
 .list-item--material__left:empty,
 .list-item--material__center {
-  padding: 14px 6px 14px 0;
+  padding: 14px 50px 14px 0;
   border-color: #eee;
   border-bottom: none;
   background-size: 100% 1px;

@@ -57,20 +57,9 @@
       
     $(document).ready(function(){
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
-
-      if(debug == 1){
-        console.log(localStorage.getItem('token'));
-      }
-      
       verifica_auth();
       setInterval(verifica_auth, localStorage.getItem( 'app_timeverify_auth' ));
 
-      /////////// 
-      $('#activeFinanceiro').click(function(){
-          ons.notification.alert('teste');
-      });
-
-          
     });
 
   </script>

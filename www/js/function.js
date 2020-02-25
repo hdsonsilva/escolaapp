@@ -18,7 +18,7 @@ function direcionar(url){
 
 
 function abrirURL( pagina , sem_token){
-      if(debug == 1){
+      if(1/*debug == 1*/){
         window.open(pagina+"?token="+ localStorage.getItem("token") );
       }
       else{

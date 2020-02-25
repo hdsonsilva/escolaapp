@@ -38,7 +38,7 @@
     <splash src="./www/img/Default@3x~universal~comany.png" />
     
     <platform name="android">
-         
+        <gap:plugin name="onesignal-cordova-plugin" source="npm" />
         <allow-intent href="market:*" />
         <icon density="ldpi" src="./www/img/doctum120x120.png" />
         <icon density="mdpi" src="./www/img/doctum120x120.png" />

@@ -14,7 +14,7 @@
     <plugin name="cordova-plugin-whitelist" source="npm"/>
     <plugin name="cordova-plugin-splashscreen" source="npm"/>
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
-    
+    <plugin name="onesignal-cordova-plugin" source="npm" />
     <!-- Requires cli-8.0.0 but we recommend using the latest version. -->
     <preference name="phonegap-version" value="cli-9.0.0" /> 
     <preference name="android-build-tool" value="gradle" />
@@ -39,7 +39,6 @@
     <splash src="./www/img/Default@3x~universal~comany.png" />
     
     <platform name="android">
-        <gap:plugin name="onesignal-cordova-plugin" source="npm" />
         <allow-intent href="market:*" />
         <icon density="ldpi" src="./www/img/doctum120x120.png" />
         <icon density="mdpi" src="./www/img/doctum120x120.png" />
@@ -57,7 +56,7 @@
         <icon density="ldpi" src="./res/ios/logo120x120.png" width="120" height="120"/>
         <icon density="mdpi" src="./res/ios/logo152x152.png" width="152" height="152"/>
         <icon density="hdpi" src="./res/ios/logo167x167.png" width="167" height="167"/>
-        <icon density="xhdpi" src="./www/img/logo1024x1024.png" width="1024" height="1024"/>
+        <icon density="xhdpi" src="./res/ios/logo1024x1024.png" width="1024" height="1024"/>
         
     </platform>
     

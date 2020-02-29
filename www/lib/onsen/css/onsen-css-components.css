@@ -1191,7 +1191,7 @@ h4, h5, h6 {
   letter-spacing: 0;
   color: white;
   vertical-align: middle;
-  background-color: rgba(24, 103, 194, .81);
+  background-color: rgb(86, 194, 205);
   border: 0 solid currentColor;
   border-radius: 3px;
   -webkit-transition: none;
@@ -1967,8 +1967,8 @@ h4, h5, h6 {
   font-weight: 400;
   border-radius: 0;
   background-color: transparent;
-  color: rgba(18, 114, 224, .77);
-  border: 1px solid rgba(18, 114, 224, .77);
+  color: rgb(86, 194, 205);
+  border: 1px solid rgb(86, 194, 205);
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-right-width: 1px;
@@ -2007,7 +2007,7 @@ h4, h5, h6 {
   transition: none;
 }
 :checked + .segment__button {
-  background-color: rgba(18, 114, 224, .77);
+  background-color: rgb(86, 194, 205);
   color: #fff;
   -webkit-transition: none;
   transition: none;
@@ -5814,7 +5814,7 @@ h4, h5, h6 {
   color: #ffffff;
   vertical-align: middle;
   text-align: center;
-  background-color: rgba(24, 103, 194, .81);
+  background-color: rgb(86, 194, 205);
   border: 0 solid currentColor;
   border-radius: 50%;
   overflow: hidden;

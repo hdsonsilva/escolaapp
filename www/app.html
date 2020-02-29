@@ -13,12 +13,14 @@
   <script src="./js/login.js"></script>
   <script src="./js/acoes.js"></script>
   <script src="./js/cadastronovamensagem.js"></script>
+  <script src="./js/marcarrecado.js"></script>
 
   <script src="./js/controle.js"></script>
   <script src="./js/view_home.js"></script>
   <script src="./js/view_academico.js"></script>
   <script src="./js/view_boletos.js"></script>
   <script src="./js/view_bilhetes.js"></script>
+  <script src="./js/view_recadoenviado.js"></script>
   <script src="./js/view_agenda.js"></script>
   <script src="./js/view_academico.js"></script>
 
@@ -47,7 +49,8 @@
 
       //Atualizando a lista de tarefas para o usuario
       document.addEventListener('show', function(event) {
-        
+      
+      $('#buttontop').html("");
       //Verifica a pagina selecionada
        controle(event);
 
@@ -94,8 +97,8 @@
         <div class="center" id="tituloApp">Agenda Escolar</div>
         <div class="right">
                    <!-- Toolbar-button  only visible for iOS/other. -->
-          <ons-toolbar-button id="buttonreload" component="buttonreload">
-            <!--<ons-icon icon="fa-undo"></ons-icon>-->
+          <ons-toolbar-button id="buttontop" component="buttonreload">
+            
             
           </ons-button>
         </div>

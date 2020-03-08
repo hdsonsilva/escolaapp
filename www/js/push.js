@@ -9,17 +9,14 @@
 
         /////////////////// ACAO EXECUTADA QUANDO SE CLICA NA NOTIFICACAO PUSH////////
         var notificationOpenedCallback = function(jsonData) {
-           
-          if(debug == 1){
-            ons.notification.alert(JSON.stringify(jsonData.notification.payload.additionalData));
-          }
+          
 
           /*Verificano qual aba será aberta para exibir as notificacoes*/
-          var dadosnotificacao = jsonData.notification.payload.additionalData ;
+          /*var dadosnotificacao = jsonData.notification.payload.additionalData ;
           if(dadosnotificacao.appaba){
             window.location.href = 'app.html?objeto='+dadosnotificacao.appaba ;
           } 
-          
+          */
         //Teste de como pegar dados s no push
         //localStorage.setItem('pushInfo',jsonData.notification.payload.additionalData.sessao);
           /*
@@ -34,9 +31,6 @@
 
           */
           
-          if(debug == 1){
-            ons.notification.alert('final');
-          }
         }
         
         window.plugins.OneSignal

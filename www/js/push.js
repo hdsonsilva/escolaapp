@@ -7,12 +7,12 @@
         // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
         
 
-        /*
+
         var dadosnotificacao = jsonData.notification.payload.additionalData ;
           if(dadosnotificacao.appaba){
             window.location.href = 'app.html?objeto='+dadosnotificacao.appaba ;
           }
-          */
+        /*
         if(debug == 1){
           ons.notification.alert('iniciando push');
         }
@@ -40,6 +40,7 @@
             ons.notification.alert('final');
           }
         }
+        */
         
         window.plugins.OneSignal
           .startInit(localStorage.getItem('idonesignal'))

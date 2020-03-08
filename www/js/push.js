@@ -2,13 +2,17 @@
      document.addEventListener('deviceready', function () {
         //Desativar botao voltar
         document.addEventListener("backbutton", function(){navigator.app.exitApp();} , false);
-          var dadosnotificacao = jsonData.notification.payload.additionalData ;
+
+        // Enable to debug issues.
+        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+        
+
+        /*
+        var dadosnotificacao = jsonData.notification.payload.additionalData ;
           if(dadosnotificacao.appaba){
             window.location.href = 'app.html?objeto='+dadosnotificacao.appaba ;
           }
-        // Enable to debug issues.
-        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-        /*
+          */
         if(debug == 1){
           ons.notification.alert('iniciando push');
         }
@@ -36,7 +40,7 @@
             ons.notification.alert('final');
           }
         }
-        */
+        
         window.plugins.OneSignal
           .startInit(localStorage.getItem('idonesignal'))
           .handleNotificationOpened(notificationOpenedCallback  )

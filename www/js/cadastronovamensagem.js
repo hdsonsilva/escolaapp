@@ -8,7 +8,7 @@ function cadastronovamensagem(msg){
               cache: false,
               timeout: 10000,
               data: {
-                'texto'  : encodeURI(msg),
+                'texto'  : removerAcentos(msg),
                 'aluno'  : localStorage.getItem('login_username'),
                 'codigoRecado' : ''
               },

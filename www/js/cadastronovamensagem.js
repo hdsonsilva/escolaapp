@@ -19,12 +19,14 @@ function cadastronovamensagem(msg){
                   showModal('show');
               },
               success:function(ret){
+                alert('entrou no sucess');
                 showModal('hide');
                 //Se retornar um token valido de acesso
                 
                 console.log(ret);
                 //Localizou token... fez login
                 if(ret.status == 'ok'){
+                  alert('achou status ok');
                     ons.notification.toast('Recado enviado com sucesso.', {timeout: 1500});
                     setTimeout(direcionar, 2000, './app.html?objeto=bilhetes');
                   }
@@ -35,6 +37,7 @@ function cadastronovamensagem(msg){
               
               },
               error:function(e){
+                alert('entrou no erro');
                 showModal('hide');
                 $('#progress').hide();
                 ons.notification.toast('Falha ao conectar. Verifique sua conexão.', {timeout: 3000});

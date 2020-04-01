@@ -1,7 +1,7 @@
 function cadastronovamensagem(msg){
       
             showModal('show');
-            ons.notification.alert(server1 + localStorage.getItem('unidade') + '/' + 'alunos/api/mural/cadastra-recados/?apitoken='+localStorage.getItem('token')+"&periodo_letivo="+localStorage.getItem('periodoletivo'));
+            
             $.ajax({
               type: 'POST',
               url : server1 + localStorage.getItem('unidade') + '/' + 'alunos/api/mural/cadastra-recados/?apitoken='+localStorage.getItem('token')+"&periodo_letivo="+localStorage.getItem('periodoletivo'),
@@ -19,14 +19,14 @@ function cadastronovamensagem(msg){
                   showModal('show');
               },
               success:function(ret){
-                ons.notification.alert('entrou no sucess');
+                
                 showModal('hide');
                 //Se retornar um token valido de acesso
                 
                 console.log(ret);
                 //Localizou token... fez login
                 if(ret.status == 'ok'){
-                  ons.notification.alert('achou status ok');
+                  
                     ons.notification.toast('Recado enviado com sucesso.', {timeout: 1500});
                     setTimeout(direcionar, 2000, './app.html?objeto=bilhetes');
                   }
@@ -37,7 +37,7 @@ function cadastronovamensagem(msg){
               
               },
               error:function(e){
-                ons.notification.alert('entrou no erro');
+                
                 showModal('hide');
                 $('#progress').hide();
                 ons.notification.toast('Falha ao conectar. Verifique sua conexão.', {timeout: 3000});

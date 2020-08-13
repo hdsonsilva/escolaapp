@@ -4,16 +4,9 @@
         
 
         document.addEventListener("backbutton", function(){navigator.app.exitApp();} , false);
-
-        // Enable to debug issues.
-        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-        
-
-
-       
+      
    
-          ons.notification.alert('antes');
-
+          
           if(localStorage.getItem('usuarios_salvos')){
             var usuarios = localStorage.getItem('usuarios_salvos') ;
             for(i in usuarios){

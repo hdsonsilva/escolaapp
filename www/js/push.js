@@ -8,6 +8,8 @@
    
           
           if(localStorage.getItem('usuarios_salvos')){
+            ons.notification.alert('enreou');
+
             var usuarios = localStorage.getItem('usuarios_salvos') ;
             for(i in usuarios){
 

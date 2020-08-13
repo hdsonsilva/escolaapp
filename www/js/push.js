@@ -13,7 +13,7 @@
 
                 window.plugins.OneSignal
                   .startInit(localStorage.getItem('idonesignal'))
-                 /* .handleNotificationOpened(notificationOpenedCallback  )*/
+                  .handleNotificationOpened(notificationOpenedCallback  )
                   .endInit();
 
 

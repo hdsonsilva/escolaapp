@@ -8,7 +8,7 @@
         // Enable to debug issues.
         // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
         
-        ons.notification.alert('Teste 2');
+
 
         var dadosnotificacao = jsonData.notification.payload.additionalData ;
           if(dadosnotificacao.appaba){
@@ -20,6 +20,8 @@
           if(localStorage.getItem('usuarios_salvos')){
             var usuarios = localStorage.getItem('usuarios_salvos') ;
             for(i in usuarios){
+
+              ons.notification.alert(usuarios[i]['codigo']);
               window.plugins.OneSignal
                 .startInit(localStorage.getItem('idonesignal'))
                 .handleNotificationOpened(notificationOpenedCallback  )

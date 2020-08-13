@@ -27,6 +27,8 @@ function login(usuario, senha, app_, unidade, nome){
             auth_check  = 1 ;
             
             if(app_ == 'index'){
+
+              
               ons.notification.toast('Login efetuado com sucesso.', {timeout: 1000});
                //Armazenando o token
               localStorage.setItem('token',ret.token);

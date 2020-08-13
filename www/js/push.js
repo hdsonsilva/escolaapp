@@ -8,12 +8,9 @@
    
           var notificationOpenedCallback = function(jsonData) {
            
-              ons.notification.alert(JSON.stringify(jsonData);
-                
+              ons.notification.alert(JSON.stringify(jsonData));
+
             };
-
-
-          var usuarios ;
 
           // Set your iOS Settings
           var iosSettings = {};
@@ -22,6 +19,7 @@
 
 
           if(localStorage.getItem('usuarios_salvos')){
+            var usuarios ;
             usuarios = JSON.parse(localStorage.getItem('usuarios_salvos'));
               for(i in usuarios){
 

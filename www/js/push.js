@@ -36,9 +36,9 @@
             }
           );
           
-          if(debug == 1){
+          if(debug == 1){*/
             ons.notification.alert('final');
-          }
+          /*}
         }
         */
         

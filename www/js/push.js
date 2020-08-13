@@ -16,6 +16,7 @@
                  /* .handleNotificationOpened(notificationOpenedCallback  )*/
                   .endInit();
 
+
                 window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+(usuarios[i]['usuario']) );
               }
             

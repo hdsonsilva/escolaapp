@@ -15,7 +15,7 @@
             window.location.href = 'app.html?objeto='+dadosnotificacao.appaba ;
           }
    
-
+          ons.notification.alert('antes');
 
           if(localStorage.getItem('usuarios_salvos')){
             var usuarios = localStorage.getItem('usuarios_salvos') ;
@@ -30,4 +30,6 @@
               window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+usuarios[i]['codigo'] );
             }
           }
+
+          ons.notification.alert('depois');
 }, false);

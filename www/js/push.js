@@ -6,24 +6,19 @@
         document.addEventListener("backbutton", function(){navigator.app.exitApp();} , false);
       
    
-          
+          var usuarios ;
           if(localStorage.getItem('usuarios_salvos')){
-            ons.notification.alert('enreou');
-            alert(localStorage.getItem('usuarios_salvos'));
-            var usuarios = localStorage.getItem('usuarios_salvos') ;
-              if(0){
+            usuarios = JSON.parse(localStorage.getItem('usuarios_salvos'));
               for(i in usuarios){
 
-                ons.notification.alert( 'usu' );
-                ons.notification.alert( usuarios[i]['codigo'] +'ok');
                 window.plugins.OneSignal
                   .startInit(localStorage.getItem('idonesignal'))
                  /* .handleNotificationOpened(notificationOpenedCallback  )*/
                   .endInit();
 
-                window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+(usuarios[i]['codigo']) );
+                window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+(usuarios[i]['usuario']) );
               }
-            }
+            
           }
 
           ons.notification.alert('depois');

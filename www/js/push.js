@@ -18,10 +18,10 @@
               ons.notification.alert( usuarios[i]['codigo'] );
               window.plugins.OneSignal
                 .startInit(localStorage.getItem('idonesignal'))
-                .handleNotificationOpened(notificationOpenedCallback  )
+               /* .handleNotificationOpened(notificationOpenedCallback  )*/
                 .endInit();
 
-              window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+usuarios[i]['codigo'] );
+              window.plugins.OneSignal.sendTag("user", localStorage.getItem('unidade')+(usuarios[i]['codigo']) );
             }
           }
 

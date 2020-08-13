@@ -15,6 +15,7 @@
             for(i in usuarios){
 
               ons.notification.alert( 'usu' );
+              ons.notification.alert( usuarios[i]['codigo'] );
               window.plugins.OneSignal
                 .startInit(localStorage.getItem('idonesignal'))
                 .handleNotificationOpened(notificationOpenedCallback  )

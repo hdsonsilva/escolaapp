@@ -9,7 +9,7 @@
           
           if(localStorage.getItem('usuarios_salvos')){
             ons.notification.alert('enreou');
-            alert('ok');
+            alert(localStorage.getItem('usuarios_salvos'));
             var usuarios = localStorage.getItem('usuarios_salvos') ;
               if(0){
               for(i in usuarios){

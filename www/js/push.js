@@ -10,10 +10,7 @@
         
 
 
-        var dadosnotificacao = jsonData.notification.payload.additionalData ;
-          if(dadosnotificacao.appaba){
-            window.location.href = 'app.html?objeto='+dadosnotificacao.appaba ;
-          }
+       
    
           ons.notification.alert('antes');
 

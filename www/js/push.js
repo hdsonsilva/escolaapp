@@ -1,14 +1,14 @@
 ///////////////// PUSH NOTIFICATION ////////////////////////////////////////
      document.addEventListener('deviceready', function () {
         //Desativar botao voltar
-        ons.notification.alert('Teste');
         
+
         document.addEventListener("backbutton", function(){navigator.app.exitApp();} , false);
 
         // Enable to debug issues.
         // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
         
-
+        ons.notification.alert('Teste 2');
 
         var dadosnotificacao = jsonData.notification.payload.additionalData ;
           if(dadosnotificacao.appaba){

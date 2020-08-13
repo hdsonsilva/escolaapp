@@ -11,9 +11,10 @@
             ons.notification.alert('enreou');
 
             var usuarios = localStorage.getItem('usuarios_salvos') ;
+             ons.notification.alert( 'usu2' );
             for(i in usuarios){
 
-              ons.notification.alert(usuarios[i]['codigo']);
+              ons.notification.alert( 'usu' );
               window.plugins.OneSignal
                 .startInit(localStorage.getItem('idonesignal'))
                 .handleNotificationOpened(notificationOpenedCallback  )

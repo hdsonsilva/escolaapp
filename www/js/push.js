@@ -6,7 +6,21 @@
         document.addEventListener("backbutton", function(){navigator.app.exitApp();} , false);
       
    
+          var notificationOpenedCallback = function(jsonData) {
+           
+              ons.notification.alert(JSON.stringify(jsonData);
+                
+            };
+
+
           var usuarios ;
+
+          // Set your iOS Settings
+          var iosSettings = {};
+          iosSettings["kOSSettingsKeyAutoPrompt"] = false;
+          iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+
+
           if(localStorage.getItem('usuarios_salvos')){
             usuarios = JSON.parse(localStorage.getItem('usuarios_salvos'));
               for(i in usuarios){
@@ -14,6 +28,7 @@
                 window.plugins.OneSignal
                   .startInit(localStorage.getItem('idonesignal'))
                   .handleNotificationOpened(notificationOpenedCallback  )
+                  .iOSSettings(iosSettings)
                   .endInit();
 
 
@@ -22,5 +37,4 @@
             
           }
 
-          ons.notification.alert('depois');
 }, false);

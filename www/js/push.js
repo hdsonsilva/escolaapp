@@ -7,8 +7,20 @@
       
    
           var notificationOpenedCallback = function(jsonData) {
-           
-              ons.notification.alert(JSON.stringify(jsonData));
+              
+              ons.notification.alert(jsonData.notification.payload.message);
+              /*
+               //Teste de como pegar dados s no push
+        //localStorage.setItem('pushInfo',jsonData.notification.payload.additionalData.sessao);
+
+          document.querySelector('#myNavigator').pushPage('html/details_task.html',
+            {
+              animation: 'lift',
+              data: {
+                element:  jsonData.notification.payload.additionalData
+              }
+            }
+          );*/
 
             };
 
@@ -25,7 +37,7 @@
 
                 window.plugins.OneSignal
                   .startInit(localStorage.getItem('idonesignal'))
-                  .handleNotificationOpened(notificationOpenedCallback  )
+                  . (notificationOpenedCallback  )
                   .iOSSettings(iosSettings)
                   .endInit();
 

@@ -8,7 +8,7 @@
    
           var notificationOpenedCallback = function(jsonData) {
               
-              ons.notification.alert(JSON.stringify(jsonData));
+              ons.notification.alert(JSON.stringify(jsonData.notification.message));
               /*
                //Teste de como pegar dados s no push
         //localStorage.setItem('pushInfo',jsonData.notification.payload.additionalData.sessao);
@@ -37,7 +37,7 @@
 
                 window.plugins.OneSignal
                   .startInit(localStorage.getItem('idonesignal'))
-                  . (notificationOpenedCallback  )
+                  .handleNotificationOpened(notificationOpenedCallback  )
                   .iOSSettings(iosSettings)
                   .endInit();
 

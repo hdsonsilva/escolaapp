@@ -8,7 +8,7 @@
    
           var notificationOpenedCallback = function(jsonData) {
               
-              ons.notification.alert(jsonData.notification.payload.additionalData.tiposolicitacao);
+              ons.notification.alert(JSON.stringify(jsonData.notification.payload.additionalData));
               /*
                //Teste de como pegar dados s no push
         //localStorage.setItem('pushInfo',jsonData.notification.payload.additionalData.sessao);

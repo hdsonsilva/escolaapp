@@ -41,6 +41,10 @@ function quebraLinha(str){
 function exibirtab(tab){
   
   switch(tab){
+    case 'avisos' : document.getElementById('myTabbar').setActiveTab(0); break ;
+    case 'agenda' : document.getElementById('myTabbar').setActiveTab(1); break ;
+    case 'academico' : document.getElementById('myTabbar').setActiveTab(2); break ;
+    case 'financeiro' : document.getElementById('myTabbar').setActiveTab(3); break ;
     case 'bilhetes' : document.getElementById('myTabbar').setActiveTab(4); break ;
   }
   

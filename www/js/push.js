@@ -8,7 +8,9 @@
    
           var notificationOpenedCallback = function(jsonData) {
               
-              ons.notification.alert(jsonData.notification.payload.additionalData.dados.tiposolicitacao );
+              //ons.notification.alert(jsonData.notification.payload.additionalData.dados.tiposolicitacao );
+
+               window.location.href = 'app.html?objeto='+jsonData.notification.payload.additionalData.dados.app_tab ;
               /*
                //Teste de como pegar dados s no push
         //localStorage.setItem('pushInfo',jsonData.notification.payload.additionalData.sessao);

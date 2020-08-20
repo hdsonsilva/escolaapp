@@ -54,13 +54,18 @@ function exibirtab(tab){
 
 function abrirURL( pagina , sem_token){
       
-      if(sem_token){
+      /*if(sem_token){
          window.open(pagina,"_system");
-        }
-        else{
+      }
+      else{
           window.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_system");
-        }
-
+      }*/
+      if(sem_token){
+         navigator.app.loadUrl(pagina, { openExternal: true });
+      }
+      else{
+          navigator.app.loadUrl(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true });
+      }
       /*if(debug == 1){
         window.open(pagina+"?token="+ localStorage.getItem("token") );
       }

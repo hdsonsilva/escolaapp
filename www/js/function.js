@@ -58,7 +58,7 @@ function abrirURL( pagina , sem_token){
          window.open(pagina,"_system");
         }
         else{
-          window.open(pagina+"?token="+localStorage.getItem("token"),"_system");
+          window.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_system");
         }
 
       /*if(debug == 1){

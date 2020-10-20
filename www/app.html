@@ -52,9 +52,7 @@
       //Atualizando a lista de tarefas para o usuario
       document.addEventListener('show', function(event) {
       
-      $('#buttontop').html("");
-      //Verifica a pagina selecionada
-       controle(event);
+     
 
 
       }, false);
@@ -63,7 +61,9 @@
     $(document).ready(function(){
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
       //setInterval(verifica_auth, localStorage.getItem( 'app_timeverify_auth' ));
-
+       $('#buttontop').html("");
+      //Verifica a pagina selecionada
+       controle(event);
       //Verificando se tem alguma ação  a ser feita
       retorno = retornaparametro();
       setTimeout(exibirtab, 500, retorno);

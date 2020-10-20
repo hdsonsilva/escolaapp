@@ -62,7 +62,7 @@ function abrirURL( pagina , sem_token){
       }*/
       
       //Retirado verificacao se é sem token ou nao... sempre envia token
-      if( pagina.indexof('?') > 0 ){
+      if( pagina.indexOf('?') > 0 ){
         navigator.app.loadUrl(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true });
       }
       else{

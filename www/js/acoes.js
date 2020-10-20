@@ -77,5 +77,9 @@ function retornoAcao(acao, retorno){
      view_recadoenviado(retorno);   
     }
 
+    else if(acao.substring(0,28) == 'alunos/api/notas/ver-materia/'){
+     view_detalhesnotas(retorno);   
+    }
+
 
 }

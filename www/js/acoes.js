@@ -57,6 +57,7 @@ Funcao para tratar retorno de requisicao assincrona e realizar ação correta
  */
 function retornoAcao(acao, retorno){
    // ons.notification.alert(retorno);
+   
     if(acao == 'alunos/api/financeiro/boletos') {
         view_boletos(retorno);
     }
@@ -77,7 +78,8 @@ function retornoAcao(acao, retorno){
      view_recadoenviado(retorno);   
     }
 
-    else if(acao.substring(0,28) == 'alunos/api/notas/ver-materia/'){
+    else if(acao.substring(0,28) == 'alunos/api/notas/ver-materia'){
+        
      view_detalhesnotas(retorno);   
     }
 

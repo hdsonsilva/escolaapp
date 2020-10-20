@@ -23,6 +23,9 @@ if(retornos['notas']){
     //Adicionando evento click para detalhar
     $('.click_detalhe_nota').click(function(){
 
+        var myNavigator = document.getElementById('myNavigator');
+        myNavigator.pushPage('html/page_detalhesnota.html');
+
         //Se estiver na pagina detalhamento de botas
     
           dados = {
@@ -36,14 +39,13 @@ if(retornos['notas']){
           }
           //Busca as notas detalhadas.. o tratamento é no view_detalhamento
           buscaAcoes('alunos/api/notas/ver-materia/'+$(this).attr('valor')+"/",dados,'GET');
-        
-    	var myNavigator = document.getElementById('myNavigator');
-        myNavigator.pushPage('html/page_detalhesnota.html');
+         
+    	
         /* Aguardando carregar a pagina para configurar os eventos após os elementos estarem carregados na tela*/
         setTimeout(function(){
             /* Acao voltar para o app principal */
             $('#bt_voltar_app').click(function(){
-                window.location.href = './app.html';
+                window.location.href = './app.html?objeto=academico';
             });
 
         }, 1000);

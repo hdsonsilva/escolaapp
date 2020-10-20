@@ -44,7 +44,7 @@ function buscaAcoes(acao,dados, tipo){
 
             showModal('hide');
             //
-            ons.notification.toast('Ocorreu algum erro ao buscar dados.' + acao, {timeout: 1000});
+            ons.notification.toast('.' + acao, {timeout: 1000});
             retornoAcao(acao,false) ;
         }
         

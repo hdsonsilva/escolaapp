@@ -18,6 +18,10 @@
     },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "io.agenda.liber2"
     }
   },
   "dependent_plugins": {}

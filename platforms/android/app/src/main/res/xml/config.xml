@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.agenda.liber2" version="2.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
@@ -13,9 +16,6 @@
     </feature>
     <feature name="OneSignalPush">
         <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
-    </feature>
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
     <name>Agenda Escola Líber</name>
     <description>
@@ -42,7 +42,7 @@
     <icon density="xhdpi" height="167" src="./res/ios/logo167x167.png" width="167" />
     <icon density="xxxhdpi" height="1024" src="./res/ios/logo1024x1024.png" width="1024" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="phonegap-version" value="cli-11.0.0" />
+    <preference name="phonegap-version" value="cli-10.0.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="android-minSdkVersion" value="23" />
     <preference name="Orientation" value="portrait" />

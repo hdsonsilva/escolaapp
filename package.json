@@ -1,5 +1,4 @@
 {
-  "dependencies": {},
   "devDependencies": {
     "cordova-android": "^9.1.0",
     "cordova-plugin-geolocation": "^4.1.0",

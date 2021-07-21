@@ -6,6 +6,7 @@
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-splashscreen": "^6.0.0",
     "cordova-plugin-whitelist": "^1.3.4",
+    "geolocation": "^0.2.0",
     "onesignal-cordova-plugin": "^2.11.4"
   },
   "cordova": {
@@ -14,9 +15,7 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-inappbrowser": {},
       "onesignal-cordova-plugin": {},
-      "cordova-plugin-geolocation": {
-        "GPS_REQUIRED": "true"
-      }
+      "cordova-plugin-geolocation": {}
     },
     "platforms": [
       "android",

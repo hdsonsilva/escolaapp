@@ -15,10 +15,7 @@
     <script src="../lib/onsen/js/onsenui.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuymfuo5u4zDlZJGaGt62D9UcDq6pW8I&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
+    
       <!-- --------------- App init --------------- -->
 
     <title>Agenda Escolar</title>
@@ -66,6 +63,70 @@
 <script src="../scripts/index.js"></script>
 <script src="../js/cadastro.js"></script>
 <script src="../js/function.js"></script>
+<script>
+    let map;
+
+    $(document).ready(function(){
+
+      $('#iniciarbusca').click(function(){
+        initMap(-19.780191 , -42.143092, "Você está aqui");
+      });
+
+
+      $('#bt_voltar').click(function(){
+
+        direcionar("../app.html");
+
+      });
+      
+    });
+    
+    function initMap(lat, long, info) {
+      let latt = -19.790191 , longg = -42.143092;
+
+      if(lat){
+        latt = lat;
+      }
+      if(long){
+        longg = long;
+      }
+      if(!info){
+        info = 'Escola Liber';
+      }
+      const escola = {
+          zoom: 18,
+          center: { lat: latt, lng: longg}
+      };
+
+      /*Se o mapa não existir, cria o mapa no objeto #map */
+      if(typeof map != 'object'){
+       map = new google.maps.Map(document.getElementById("map"), escola);
+      }
+      /*Se o mapa existir, apenas muda o centro dele */
+      else{
+        const center = new google.maps.LatLng(latt, longg);
+        map.panTo(center);
+      }
+      const marker = new google.maps.Marker({
+          // The below line is equivalent to writing:
+          // position: new google.maps.LatLng(-34.397, 150.644)
+          position: { lat:latt, lng: longg},
+          map: map,
+      });
+      // You can use a LatLng literal in place of a google.maps.LatLng object when
+      // creating the Marker object. Once the Marker object is instantiated, its
+      // position will be available as a google.maps.LatLng object. In this case,
+      // we retrieve the marker's position using the
+      // google.maps.LatLng.getPosition() method.
+      const infowindow = new google.maps.InfoWindow({
+        content: "<p>"+info+": " + marker.getPosition() + "</p>",
+      });
+      google.maps.event.addListener(marker, "click", () => {
+        infowindow.open(map, marker);
+      });
+}
+
+    </script>
 <ons-page  modifier="menu-page" >
     <ons-toolbar>
       <div class="left">
@@ -77,48 +138,24 @@
       </div>
 
       <div class="center">Buscar Estudante</div>
-      
+      <div class="right" style="color:#56c2cd">
+        .
+        
+        </ons-button>
+      </div>
     </ons-toolbar>
     
     <div id="map">
                      
       </div>
-    <div class='positionbottom'>
-      <ons-fab id="newuser">
-        <ons-icon icon="md-plus"></ons-icon>
-      </ons-fab>
+    <div class='positionbottom3'>
+      <button id='iniciarbusca' class="button">Buscar/Entregar Estudante</button>
     </div>
 </ons-page>
-<script>
 
-    let map;
-    
-    function initMap() {
-      const escola = {
-          zoom: 18,
-          center: { lat:-19.790191, lng: -42.143092}
-      };
-
-      map = new google.maps.Map(document.getElementById("map"), escola);
-      const marker = new google.maps.Marker({
-          // The below line is equivalent to writing:
-          // position: new google.maps.LatLng(-34.397, 150.644)
-          position: { lat:-19.790191, lng: -42.143092},
-          map: map,
-      });
-      // You can use a LatLng literal in place of a google.maps.LatLng object when
-      // creating the Marker object. Once the Marker object is instantiated, its
-      // position will be available as a google.maps.LatLng object. In this case,
-      // we retrieve the marker's position using the
-      // google.maps.LatLng.getPosition() method.
-      const infowindow = new google.maps.InfoWindow({
-        content: "<p>Escola Liber:" + marker.getPosition() + "</p>",
-      });
-      google.maps.event.addListener(marker, "click", () => {
-        infowindow.open(map, marker);
-      });
-}
-
-    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuymfuo5u4zDlZJGaGt62D9UcDq6pW8I&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 </html>

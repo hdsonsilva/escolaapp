@@ -110,6 +110,12 @@ ons-splitter-side[side="left"][animation="overlay"] {
         right: 15px;
 }
 
+.positionbottom3{
+        position: absolute;
+        bottom: 15px;
+        text-align: center;
+        width: 100%;
+}
 /********************
  *** Animation CSS ***
  ********************/

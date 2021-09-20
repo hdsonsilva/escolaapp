@@ -74,13 +74,30 @@
     <script src="./js/push.js"></script>
     <script type="text/javascript">
     var auth_check ;
+    var usuarios;
     auth_check = 0 ;
-
     
     $(document).ready(function(){
       //Verificando usuarios salvos
       if(localStorage.getItem('usuarios_salvos')){
+        //Exibe lista de usuarios na tela inicial
         exibir_usuarios(JSON.parse(localStorage.getItem('usuarios_salvos')));
+        //Faz login automático para um usuario apenas
+        usuarios = JSON.parse(localStorage.getItem('usuarios_salvos'));
+        if(usuarios.length == 1){
+          //Pega Usuario
+          
+          buscarDadosUsuario(usuarios[0]['codigo']);
+          //Pega senha
+
+          //Loga no sistema
+          auth_check = 0 ;
+          //Escondendo botao no inicio do processo de login
+          $('#button').hide();
+          $('#progress').show();
+          login(localStorage.getItem('login_username'),localStorage.getItem('login_password'), 'index', localStorage.getItem('login_unidade'),  localStorage.getItem('login_nome'));
+
+        }
 
       }
       //Caso nao tenha usuários, direciona para tela de cadastro
@@ -109,7 +126,19 @@
         window.location.href = './cadastrousuario.html';
 
       });
-
+      /*
+      var permissions = cordova.plugins.permissions;
+        
+      permissions.requestPermission( permissions.RECEIVE_WAP_PUSH, success, error );
+ 
+      function error() {
+        console.warn('Camera permission is not turned on');
+      }
+       
+      function success( status ) {
+        if( !status.hasPermission ) error();
+      }
+    */
 
   });
 

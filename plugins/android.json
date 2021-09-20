@@ -7,6 +7,15 @@
     "files": {}
   },
   "installed_plugins": {
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
     "cordova-plugin-geolocation": {
       "GPS_REQUIRED": "true",
       "PACKAGE_NAME": "io.agenda.liber2"
@@ -14,10 +23,10 @@
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
-    "cordova-plugin-splashscreen": {
+    "cordova-plugin-photos": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
     "onesignal-cordova-plugin": {

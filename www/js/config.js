@@ -6,6 +6,7 @@ var appName = 'Agenda Escola Liber' ;
 
 //URL AUTENTICACAO
 var url_auth =  'fer/apitoken/cria_token.php';
+var url_upload_foto = 'alunos/api/embarque/atualiza-foto' ;
 
 var server_action = server + 'testeretorno.php';
 

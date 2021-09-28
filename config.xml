@@ -42,6 +42,9 @@
         <custom-config-file platform="ios" target="-Info.plist" parent="NSPhotoLibraryUsageDescription">
             <string>A biblioteca de arquivos é usada opcionalmente para adicionar uma foto do aluno ao seu perfil</string>
         </custom-config-file>
+        <custom-config-file platform="ios" target="-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>O Acesso à sua localização é solicitado quando você usar a funcionalidade de buscar/levar seu filho à escola</string>
+        </custom-config-file>
         <allow-intent href="market:*" />
         <icon density="ldpi" height="40" src="./res/ios/logo40x40.png" width="40" />
         <icon density="mdpi" height="120" src="./res/ios/logo120x120.png" width="120" />

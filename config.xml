@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="2.0.7" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+<widget id="io.agenda.liber2" version="2.0.8" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <name>Agenda Escola Líber</name>
     <description>
         Aplicativo da Escola Liber. Acompanhe a vida escolar dos seus filhos de onde estiver.
@@ -36,6 +36,13 @@
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="11.0" />
+
+
+        <config-file overwrite="true" parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+            <string>The camera is optionally used to add a photo of the student to their profile.</string>
+        </config-file>
+
+
         <edit-config target="-Info.plist" parent="NSCameraUsageDescription">
             <string>The camera is optionally used to add a photo of the student to their profile.</string>
         </edit-config>
@@ -45,11 +52,13 @@
         <edit-config target="-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>Access to your location is required when you use the pick up/take your child to school functionality</string>
         </edit-config>
+        
         <allow-intent href="market:*" />
         <icon density="ldpi" height="40" src="./res/ios/logo40x40.png" width="40" />
         <icon density="mdpi" height="120" src="./res/ios/logo120x120.png" width="120" />
         <icon density="hdpi" height="152" src="./res/ios/logo152x152.png" width="152" />
         <icon density="xhdpi" height="167" src="./res/ios/logo167x167.png" width="167" />
         <icon density="xxxhdpi" height="1024" src="./res/ios/logo1024x1024.png" width="1024" />
+    
     </platform>
 </widget>

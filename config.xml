@@ -35,7 +35,7 @@
         <icon density="xxxhdpi" height="1024" src="./res/ios/logo1024x1024.png" width="1024" />
     </platform>
     <platform name="ios">
-        <preference name="deployment-target" value="10.3" />
+        <preference name="deployment-target" value="7.1.2" />
         <allow-intent href="market:*" />
         <icon density="ldpi" height="40" src="./res/ios/logo40x40.png" width="40" />
         <icon density="mdpi" height="120" src="./res/ios/logo120x120.png" width="120" />

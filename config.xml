@@ -36,7 +36,7 @@
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="11.0" />
-        <custom-config-file platform=“ios” target="-Info.plist" parent=“NSCameraUsageDescription”>
+        <custom-config-file platform="ios" target="-Info.plist" parent="NSCameraUsageDescription">
             <string>A camera é usada opcionalmente para adicionar uma foto do aluno ao seu perfil</string>
         </custom-config-file>
         <allow-intent href="market:*" />

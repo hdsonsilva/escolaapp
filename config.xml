@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="2.0.8" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+<widget id="io.agenda.liber2" version="2.0.9" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <name>Agenda Escola Líber</name>
     <description>
         Aplicativo da Escola Liber. Acompanhe a vida escolar dos seus filhos de onde estiver.
@@ -39,19 +39,15 @@
 
 
         <config-file overwrite="true" parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
-            <string>The camera is optionally used to add a photo of the student to their profile.</string>
+            <string>A camera é usada opcionalmente para incluir foto do estudante em seu perfil</string>
         </config-file>
 
-
-        <edit-config target="-Info.plist" parent="NSCameraUsageDescription">
-            <string>The camera is optionally used to add a photo of the student to their profile.</string>
-        </edit-config>
-        <edit-config target="-Info.plist" parent="NSPhotoLibraryUsageDescription">
-            <string>The photo library is optionally used to add a student photo to your profile.</string>
-        </edit-config>
-        <edit-config target="-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string>Access to your location is required when you use the pick up/take your child to school functionality</string>
-        </edit-config>
+        <config-file target="-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>A biblioteca de fotos pode ser usada para selecionar uma foto do estudante e colocá-la em seu perfil.</string>
+        </config-file>
+        <config-file target="-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>Podemos solicitar acesso a sua localização caso você use a funcionalidade de embarque/desembarque</string>
+        </config-file>
         
         <allow-intent href="market:*" />
         <icon density="ldpi" height="40" src="./res/ios/logo40x40.png" width="40" />

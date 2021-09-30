@@ -10,7 +10,7 @@
     <content src="index.html" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="2.4.5" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="2.11.0" />
     <preference name="phonegap-version" value="cli-10.0.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="android-minSdkVersion" value="23" />

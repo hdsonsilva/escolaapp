@@ -1,4 +1,6 @@
 function view_home(retornos){
+
+    alert('entrando na view home');
     //Alterando título do app
     $('#tituloApp').html(appName);
     $('#idNome').html(localStorage.getItem("login_nome"));
@@ -19,6 +21,8 @@ function view_home(retornos){
         conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<img width='100%' src='"+(retorno[i]['arquivo']).replace("http://", "https://")+"'><br>" : "")+quebraLinha(retorno[i]['mensagem'])+"</font>";
         conteudo_lista += "</ons-card>";
     }
+
+    alert('depois de tentar gerar o array');
 
     $('#homePageList').html(conteudo_lista);
 

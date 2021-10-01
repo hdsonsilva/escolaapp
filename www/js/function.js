@@ -47,6 +47,7 @@ function exibirtab(tab){
     case 'financeiro' : document.getElementById('myTabbar').setActiveTab(3); break ;
     case 'bilhetes' : document.getElementById('myTabbar').setActiveTab(4); break ;
   }
+  alert('Saindo da exibirtab');
   
 }
 

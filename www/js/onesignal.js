@@ -4,11 +4,18 @@ document.addEventListener('deviceready', function () {
     
     var notificationOpenedCallback = function(jsonData) {
        
-       alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+       //alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
     };
+    alert('Iniciando o push 2');
+	    // Set your iOS Settings
+		var iosSettings = {};
+		iosSettings["kOSSettingsKeyAutoPrompt"] = false;
+		iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+	    window.plugins.OneSignal
+	      .startInit(localStorage.getItem('idonesignal'))
+	      .handleNotificationOpened(notificationOpenedCallback  )
+	      .iOSSettings(iosSettings)
+	      .endInit();
 
-    window.plugins.OneSignal
-      .startInit(localStorage.getItem('idonesignal'))
-      .handleNotificationOpened(notificationOpenedCallback  )
-      .endInit();
+    alert('Finalizando o push 2');
 }, false);

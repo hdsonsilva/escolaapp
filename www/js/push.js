@@ -41,7 +41,7 @@
           var iosSettings = {};
           iosSettings["kOSSettingsKeyAutoPrompt"] = false;
           iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
-
+          alert('Iniciando o Push');
 
           if(localStorage.getItem('usuarios_salvos')){
             var usuarios ;
@@ -59,5 +59,6 @@
               }
             
           }
+          alert('Saindo do push');
 
 }, false);

@@ -26,7 +26,6 @@ function view_home(retornos){
 
     $('#homePageList').html(conteudo_lista);
 
-
     $('.clicavelhome').click(function(){
         
         abrirURL($(this).attr('valor'), 1);

@@ -1,4 +1,6 @@
 function view_home(retornos){
+
+    alert('entrando na view home');
     //Alterando título do app
     $('#tituloApp').html(appName);
     $('#idNome').html(localStorage.getItem("login_nome"));
@@ -20,8 +22,9 @@ function view_home(retornos){
         conteudo_lista += "</ons-card>";
     }
 
-    $('#homePageList').html(conteudo_lista);
+    alert('depois de tentar gerar o array');
 
+    $('#homePageList').html(conteudo_lista);
 
     $('.clicavelhome').click(function(){
         

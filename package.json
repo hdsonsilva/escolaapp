@@ -6,10 +6,8 @@
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-camera": "^5.0.3",
     "cordova-plugin-camera-preview": "^0.12.3",
-    "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
-    "cordova-plugin-photos": "^1.0.9",
     "cordova-plugin-splashscreen": "^6.0.0",
     "geolocation": "^0.2.0",
     "onesignal-cordova-plugin": "^2.11.4"
@@ -23,8 +21,7 @@
       "cordova-plugin-camera": {},
       "com-sarriaroman-photoviewer": {},
       "cordova-plugin-camera-preview": {},
-      "cordova-plugin-android-permissions": {},
-      "cordova-plugin-photos": {}
+      "cordova-plugin-android-permissions": {}
     },
     "platforms": [
       "ios",

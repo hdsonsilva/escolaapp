@@ -29,10 +29,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"Photos\"><param name=\"android-package\" value=\"com.domax.cordova.Photos\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -121,10 +117,6 @@
             {
               "xml": "<uses-feature android:name=\"android.hardware.location.gps\" android:required=\"true\" />",
               "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
-              "count": 1
             }
           ]
         }
@@ -146,9 +138,6 @@
       "PACKAGE_NAME": "io.agenda.liber2"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "io.agenda.liber2"
-    },
-    "cordova-plugin-photos": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
     "cordova-plugin-splashscreen": {
@@ -207,14 +196,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-photos.Photos",
-      "file": "plugins/cordova-plugin-photos/www/Photos.js",
-      "pluginId": "cordova-plugin-photos",
-      "clobbers": [
-        "Photos"
-      ]
-    },
-    {
       "id": "cordova-plugin-splashscreen.SplashScreen",
       "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
       "pluginId": "cordova-plugin-splashscreen",
@@ -237,7 +218,6 @@
     "cordova-plugin-camera-preview": "0.12.3",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-photos": "1.0.9",
     "cordova-plugin-splashscreen": "6.0.0",
     "onesignal-cordova-plugin": "2.11.4"
   }

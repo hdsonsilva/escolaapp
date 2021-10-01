@@ -63,14 +63,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-photos": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-photos@^1.0.9"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-compat": {
     "source": {
       "type": "registry",

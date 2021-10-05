@@ -47,14 +47,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-photos.Photos",
-      "file": "plugins/cordova-plugin-photos/www/Photos.js",
-      "pluginId": "cordova-plugin-photos",
-      "clobbers": [
-        "Photos"
-      ]
-    },
-    {
       "id": "cordova-plugin-splashscreen.SplashScreen",
       "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
       "pluginId": "cordova-plugin-splashscreen",
@@ -77,8 +69,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-camera-preview": "0.12.3",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-photos": "1.0.9",
     "cordova-plugin-splashscreen": "6.0.0",
-    "onesignal-cordova-plugin": "2.11.4"
+    "onesignal-cordova-plugin": "2.11.4",
+    "cordova-plugin-whitelist": "1.3.4"
   };
 });

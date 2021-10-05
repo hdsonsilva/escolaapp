@@ -38,6 +38,10 @@
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="11.0" />
+        <preference name="AllowUntrustedCerts"  value="true" />
+      <preference name="InterceptRemoteRequests" value="all" />
+      <preference name="allowFileAccessFromFileURLs" value="true" />
+      <preference name="allowUniversalAccessFromFileURLs" value="true" />
 
 
         <config-file overwrite="true" parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">

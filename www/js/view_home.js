@@ -1,6 +1,5 @@
 function view_home(retornos){
 
-    alert('entrando na view home');
     //Alterando título do app
     $('#tituloApp').html(appName);
     $('#idNome').html(localStorage.getItem("login_nome"));

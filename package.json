@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@globules-io/cordova-plugin-ios-xhr": "github:globules-io/cordova-plugin-ios-xhr",
     "com-sarriaroman-photoviewer": "^1.2.5",
     "cordova-android": "^10.0.0",
     "cordova-ios": "^6.2.0",
@@ -24,8 +25,8 @@
       "cordova-plugin-android-permissions": {}
     },
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

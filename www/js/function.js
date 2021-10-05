@@ -226,26 +226,23 @@ function abrirURL( pagina , sem_token){
       }*/
       
       //Retirado verificacao se é sem token ou nao... sempre envia token
-      if( pagina.indexOf('?') > 0 ){
-        navigator.app.loadUrl(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true });
-      }
-      else{
-       navigator.app.loadUrl(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true }); 
-      }  
-
       
-      /*if(debug == 1){
-        window.open(pagina+"?token="+ localStorage.getItem("token") );
-      }
-      else{
-        if(!sem_token){
-          navigator.app.loadUrl(pagina+"?token="+localStorage.getItem("token") , { openExternal: true });
+      if(navigator.app.loadUrl){
+        if( pagina.indexOf('?') > 0 ){
+          navigator.app.loadUrl(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true });
         }
         else{
-          navigator.app.loadUrl(pagina , { openExternal: true });
+         navigator.app.loadUrl(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true }); 
         }
       }
-      */
+      else{ 
+        if( pagina.indexOf('?') > 0 ){
+          window.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_system");
+        }
+        else{
+         window.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_system"); 
+        } 
+      }
 }
 
 function showModal(controle) {

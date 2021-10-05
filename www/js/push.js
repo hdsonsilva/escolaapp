@@ -53,8 +53,7 @@
               }
             
           }
-          alert('escondendo splashscreen');
           navigator.splashscreen.hide();
-          alert('Saindo do push');
+
 
 }, false);

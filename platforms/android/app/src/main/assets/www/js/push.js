@@ -53,6 +53,7 @@
               }
             
           }
-          alert('Saindo do push');
+          navigator.splashscreen.hide();
+
 
 }, false);

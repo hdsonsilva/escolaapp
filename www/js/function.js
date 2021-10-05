@@ -232,6 +232,7 @@ function abrirURL( pagina , sem_token){
       else{
        navigator.app.loadUrl(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),{ openExternal: true }); 
       }  
+
       
       /*if(debug == 1){
         window.open(pagina+"?token="+ localStorage.getItem("token") );

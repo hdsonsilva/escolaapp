@@ -7,8 +7,9 @@ cordova-plugin-geolocation 4.1.0 "Geolocation"
 cordova-plugin-inappbrowser 5.0.0 "InAppBrowser"
 cordova-plugin-splashscreen 6.0.0 "Splashscreen"
 onesignal-cordova-plugin 2.11.4 "OneSignal Push Notifications"
-cordova-plugin-whitelist
+cordova-plugin-whitelist (esse dá erro no cordova 10)
+cordova-plugin-device
 
 No MACOS instalar o plugin abaixo para funcionar o diretorio e o app achar os arquivos de paginas. O outro é para acesso à internet
 cordova plugin add https://github.com/globules-io/cordova-plugin-ios-xhr
-cordova plugin add cordova-plugin-blacklist
+cordova plugin add cordova-plugin-whitelist

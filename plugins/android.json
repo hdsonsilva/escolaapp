@@ -25,6 +25,9 @@
     },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.agenda.liber2"
     }
   },
   "dependent_plugins": {}

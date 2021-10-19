@@ -35,6 +35,12 @@
         <icon density="hdpi" height="152" src="./res/ios/logo152x152.png" width="152" />
         <icon density="xhdpi" height="167" src="./res/ios/logo167x167.png" width="167" />
         <icon density="xxxhdpi" height="1024" src="./res/ios/logo1024x1024.png" width="1024" />
+
+        <resource-file src="resources/android/onesignal/res/drawable-mdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png" />
+        <resource-file src="resources/android/onesignal/res/drawable-hdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png" />
+        <resource-file src="resources/android/onesignal/res/drawable-xhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png" />
+        <resource-file src="resources/android/onesignal/res/drawable-xxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxhdpi/ic_stat_onesignal_default.png" />
+        <resource-file src="resources/android/onesignal/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="11.0" />
@@ -49,7 +55,7 @@
         </config-file>
 
         <config-file overwrite="true" parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
-            <string>A biblioteca de fotos pode ser usada para selecionar uma foto do estudante e colocá-la em seu perfil.</string>
+            <string>A biblioteca de fotos pode ser usada para selecionar uma foto do estudante e colocá-la em seu perfil. Para exibir imagens no aplicativo também é solicitada essa permissão. Mas fique tranquilo.</string>
         </config-file>
         <config-file overwrite="true" parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
             <string>Podemos solicitar acesso a sua localização caso você use a funcionalidade de embarque/desembarque</string>

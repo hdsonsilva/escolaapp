@@ -13,7 +13,15 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"CameraPreview\"><param name=\"android-package\" value=\"com.cordovaplugincamerapreview.CameraPreview\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
               "count": 1
             },
             {
@@ -30,10 +38,6 @@
             },
             {
               "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
               "count": 1
             }
           ]
@@ -107,6 +111,14 @@
           ],
           "/*": [
             {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<queries><intent><action android:name=\"android.media.action.IMAGE_CAPTURE\" /></intent><intent><action android:name=\"android.intent.action.GET_CONTENT\" /></intent><intent><action android:name=\"android.intent.action.PICK\" /></intent><intent><action android:name=\"com.android.camera.action.CROP\" /><data android:mimeType=\"image/*\" android:scheme=\"content\" /></intent></queries>",
+              "count": 1
+            },
+            {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
               "count": 1
             },
@@ -118,6 +130,12 @@
               "xml": "<uses-feature android:name=\"android.hardware.location.gps\" android:required=\"true\" />",
               "count": 1
             }
+          ],
+          "application": [
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.cordova.plugin.camera.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
+              "count": 1
+            }
           ]
         }
       }
@@ -127,7 +145,14 @@
     "com-sarriaroman-photoviewer": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
     "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "io.agenda.liber2"
     },
     "cordova-plugin-geolocation": {
@@ -142,9 +167,6 @@
     },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "io.agenda.liber2"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.agenda.liber2"
     }
   },
   "dependent_plugins": {},
@@ -158,11 +180,51 @@
       ]
     },
     {
+      "id": "cordova-plugin-camera.Camera",
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.camera",
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverHandle",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverHandle"
+      ]
+    },
+    {
       "id": "cordova-plugin-camera-preview.CameraPreview",
       "file": "plugins/cordova-plugin-camera-preview/www/CameraPreview.js",
       "pluginId": "cordova-plugin-camera-preview",
       "clobbers": [
         "CameraPreview"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
       ]
     },
     {
@@ -202,23 +264,16 @@
       "clobbers": [
         "OneSignal"
       ]
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
-      ]
     }
   ],
   "plugin_metadata": {
     "com-sarriaroman-photoviewer": "1.2.4",
+    "cordova-plugin-camera": "6.0.0",
     "cordova-plugin-camera-preview": "0.12.3",
+    "cordova-plugin-device": "2.0.3",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-inappbrowser": "5.0.0",
     "cordova-plugin-splashscreen": "6.0.0",
-    "onesignal-cordova-plugin": "2.11.4",
-    "cordova-plugin-device": "2.0.3"
+    "onesignal-cordova-plugin": "2.11.4"
   }
 }

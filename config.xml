@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="2.0.11" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+
+<widget id="io.agenda.liber2" version="2.0.12" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <name>Agenda Escola Líber 2.0</name>
     <description>
         Aplicativo da Escola Liber. Acompanhe a vida escolar dos seus filhos de onde estiver.
@@ -19,6 +20,7 @@
     <preference name="Orientation" value="portrait" />
     <preference name="windows-appx-target" value="8.1-phone" />
     <preference name="WindowsToastCapable" value="true" />
+
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
@@ -43,8 +45,8 @@
         <resource-file src="resources/android/onesignal/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
     </platform>
     <platform name="ios">
-        <preference name="deployment-target" value="11.0" />
-        <preference name="AllowUntrustedCerts"  value="true" />
+    <preference name="deployment-target" value="11.0" />
+    <preference name="AllowUntrustedCerts"  value="true" />
       <preference name="InterceptRemoteRequests" value="all" />
       <preference name="allowFileAccessFromFileURLs" value="true" />
       <preference name="allowUniversalAccessFromFileURLs" value="true" />

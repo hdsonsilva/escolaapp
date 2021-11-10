@@ -60,7 +60,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 
 .font_tam1{
-  font-size: 12pt;
+  font-size: 14pt;
   text-align: left;
   color:#20457d; 
   font-weight: 700;
@@ -97,6 +97,18 @@ ons-splitter-side[side="left"][animation="overlay"] {
   font-size: 10pt;
   text-align:justify;
   color:gray; 
+}
+.font_pergunta{
+  font-size: 13pt;
+  
+  text-align:justify;
+  color: #FFA500;
+  font-weight: 600;
+}
+.font_resposta{
+  font-size: 12pt;
+  text-align:justify;
+  color:#FFA500; 
 }
 .positionbottom{
         position: fixed;

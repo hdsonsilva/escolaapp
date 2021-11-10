@@ -152,7 +152,21 @@
 
     $('#iniciargaleria').click(function(){
       $('.escolherfoto').hide();
-      $('#foto_upload').trigger('click');  
+      //$('#foto_upload').trigger('click'); 
+      alert('buscando galeria');
+      
+      cordova.plugins.photoLibrary.getLibrary(
+        function ({library}) { 
+            alert('acessou');
+        },
+        function (err) {
+          if (err.startsWith('Permission')) {
+            alert('Nao acessou');
+          }
+          
+        }
+      );
+      
     });
 
     $('#fecharescolherfoto').click(function(){

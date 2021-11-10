@@ -1,10 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="2.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+<widget id="io.agenda.liber2" version="2.0.12" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <feature name="PhotoViewer">
         <param name="android-package" value="com.sarriaroman.PhotoViewer.PhotoViewer" />
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
     <feature name="CameraPreview">
         <param name="android-package" value="com.cordovaplugincamerapreview.CameraPreview" />

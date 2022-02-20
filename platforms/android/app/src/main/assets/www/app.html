@@ -73,7 +73,14 @@
       retorno = retornaparametro();
       setTimeout(exibirtab, 1000, retorno);
 
+      setTimeout(function(){
+        //Excluindo DIVS automaticas do framework
+        $('#remover1').remove();
+        $('#remover2').remove();
+        $('#remover3').remove();
 
+        $('.calcular').width( ($('.modificarcor').width() - 40));
+      }, 500);
 
     });
 
@@ -102,17 +109,19 @@
   <template id="tabbar.html">
     <ons-page id="tabbarPage">
      <ons-toolbar  class='modificarcor' style="height: 50px">
-        <div class="naoquebrar" style="width:40px">
+        <div class="naoquebrar" style="width:40px;vertical-align: middle;vertical-align: 100%;margin-top: 10px">
             <!-- Toolbar-button with different icons depending on the platform. -->
             <ons-toolbar-button component="button/menu">
-              <ons-icon style="color:white;" icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
+              <ons-icon style="color:white;" icon="ion-navicon, material:md-menu" size="36px, material:24px"></ons-icon>
             </ons-toolbar-button>
         </div>
-        <div class="naoquebrar" id="tituloApp_" style="width:'100%'">
-          <img src='./img/header.png' width="100%" height="100%">
+        <div class="naoquebrar calcular" id="tituloApp_" >
+          <img src='./img/header.png' width="100%" height="100%"> 
         </div>
           </ons-button>
-       
+        <div class="left"   id='remover1'></div>
+        <div class="right"  id='remover2'></div>
+        <div class="center" id='remover3'></div>
       </ons-toolbar>
      <!--
       <ons-toolbar>

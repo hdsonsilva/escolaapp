@@ -64,6 +64,31 @@
 
       
     $(document).ready(function(){
+      //Instantaneamente
+      //Excluindo DIVS automaticas do framework
+        $('#remover1').remove();
+        $('#remover2').remove();
+        $('#remover3').remove();
+
+        $('.calcular').width( ($('.modificarcor').width() - 40));
+      //Em meio segundo  
+      setTimeout(function(){
+        //Excluindo DIVS automaticas do framework
+        $('#remover1').remove();
+        $('#remover2').remove();
+        $('#remover3').remove();
+
+        $('.calcular').width( ($('.modificarcor').width() - 40));
+      }, 500);
+      //Em 2 segundos
+      setTimeout(function(){
+        //Excluindo DIVS automaticas do framework
+        $('#remover1').remove();
+        $('#remover2').remove();
+        $('#remover3').remove();
+
+        $('.calcular').width( ($('.modificarcor').width() - 40));
+      }, 2000);
 
       
       ////////////////////// VERIFICACAO DE AUTH /////////////////////////////////
@@ -73,15 +98,7 @@
       retorno = retornaparametro();
       setTimeout(exibirtab, 1000, retorno);
 
-      setTimeout(function(){
-        //Excluindo DIVS automaticas do framework
-        $('#remover1').remove();
-        $('#remover2').remove();
-        $('#remover3').remove();
-
-        $('.calcular').width( ($('.modificarcor').width() - 40));
-      }, 500);
-
+      
     });
 
 

@@ -7,7 +7,7 @@ function view_bilhetes(retornos){
      //Alterando título do app
     
     $('#tituloApp').html("Recados");
-    $('#buttontop').html("<ons-icon icon='fa-edit'></ons-icon>");
+    //$('#buttontop').html("<ons-icon icon='fa-edit'></ons-icon>");
     if(retornos['murais']){    
         //Preenchendo a lista com cards
         for(i  in retorno){
@@ -51,8 +51,8 @@ function view_bilhetes(retornos){
     });
 
     /*Redirecionando para novo recado.. retirando evento click e criando novamente */
-    $('#buttontop').unbind('click');
-    $('#buttontop').click(function(){
+    $('#buttonnovarecado').unbind('click');
+    $('#buttonnovarecado').click(function(){
         
         var myNavigator = document.getElementById('myNavigator');
         myNavigator.pushPage('html/page_novorecado.html');

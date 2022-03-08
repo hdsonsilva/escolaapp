@@ -127,6 +127,12 @@ ons-splitter-side[side="left"][animation="overlay"] {
         right: 15px;
 }
 
+.positionbottomacimamenu{
+        position: fixed;
+        bottom: 60px;
+        right: 15px;
+}
+
 .positioncontrolcamera{
         position: fixed;
         top: 0px;

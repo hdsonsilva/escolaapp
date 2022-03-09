@@ -229,6 +229,16 @@ function abrirURL( pagina , sem_token){
 }*/
 function abrirNavigator( pagina , forcar_ios){
       let tipo ;
+
+      if(debug == 1){
+        if( pagina.indexOf('?') > 0 ){
+          window.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),'_blank');
+        }
+        else{
+          window.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),'_blank');
+        }
+        return true;
+      }
       if(forcar_ios != 'forcar'){
         tipo = '_blank';
       }
@@ -247,10 +257,10 @@ function abrirNavigator( pagina , forcar_ios){
       }
       else{ 
         if( pagina.indexOf('?') > 0 ){
-          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),tipo, "location=no");
+          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),tipo, "location=yes");
         }
         else{
-          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),forcar, "location=no"); 
+          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),tipo, "location=yes"); 
         } 
       }
 }
@@ -263,18 +273,18 @@ function abrirURL( pagina , sem_token){
       
       if (device.platform.toUpperCase() === 'ANDROID') {
         if( pagina.indexOf('?') > 0 ){
-          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=no");
+          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=yes");
         }
         else{
-          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=no"); 
+          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=yes"); 
         }
       }
       else{ 
         if( pagina.indexOf('?') > 0 ){
-          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=no");
+          cordova.InAppBrowser.open(pagina+"&apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=yes");
         }
         else{
-          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=no"); 
+          cordova.InAppBrowser.open(pagina+"?apitoken="+localStorage.getItem("token")+"&periodo_letivo="+localStorage.getItem('periodoletivo'),"_blank", "location=yes"); 
         } 
       }
 }

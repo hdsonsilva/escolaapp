@@ -98,6 +98,19 @@
       retorno = retornaparametro();
       setTimeout(exibirtab, 1000, retorno);
 
+      setTimeout(
+        function(){
+          
+          $('#periodo_letivo > select').html('');
+          for(i = year ; i >= (year-3); i--){
+            $('#periodo_letivo > select').html($('#periodo_letivo').html()+ "<option value='"+i+"'>"+i+"</option>");
+            
+          }
+
+          $('#periodo_letivo').val(localStorage.getItem('periodoletivo'));
+        },
+        500);
+
       
     });
 

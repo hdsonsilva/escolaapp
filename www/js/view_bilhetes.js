@@ -67,7 +67,7 @@ function view_bilhetes(retornos){
                 $('#button').show();
                 /*Verificando se o recado foi digitado e possui mais de 10 caractere */
                 if($('#mensagemnovorecado').val() =='' || $('#mensagemnovorecado').val().length < 10 ){
-                    ons.notification.toast('Escreva a mensagem antes de enviar.',{'timeout':1500});
+                    ons.notification.toast('Escreva uma mensagem completa antes de enviar.',{'timeout':1500});
                 }
                 else{
                     cadastronovamensagem($('#mensagemnovorecado').val());

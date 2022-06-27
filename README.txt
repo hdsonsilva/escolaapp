@@ -9,6 +9,8 @@ cordova-plugin-splashscreen 6.0.0 "Splashscreen"
 onesignal-cordova-plugin 2.11.4 "OneSignal Push Notifications"
 cordova-plugin-whitelist (esse dá erro no cordova 10 no android. Deve ser usado apenas no ios)
 cordova-plugin-device
+cordova-plugin-document-viewer
+cordova-plugin-file-transfer
 
 No MACOS instalar o plugin abaixo para funcionar o diretorio e o app achar os arquivos de paginas. O outro é para acesso à internet
 cordova plugin add https://github.com/globules-io/cordova-plugin-ios-xhr

@@ -15,6 +15,23 @@ ons-splitter-side[side="left"][animation="overlay"] {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.envioindividual{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: : 5px !important;
+  margin-right: 5px;
+  right: -5px;
+  text-align: center;
+}
+
+.envioindividualerro{
+  padding-top: 45%;
+  text-align: center;
+  vertical-align: middle;
+  overflow-y: hidden;
+  
+}
+
 .modificarcor{
   background: #56C2CD !important;
 }
@@ -364,4 +381,113 @@ ons-splitter-side[side="left"][animation="overlay"] {
     background-image: linear-gradient(0deg, #ccc, #ccc 100%);
     line-height: 1.2em;
     min-height: 44px;
+}
+
+.msg_titulo{
+  font-size: 8pt;
+  text-align: left;
+  color:#20457d; 
+  font-weight: 700;
+}
+.msg_last{
+  font-size: 8pt;
+  text-align: left;
+  color:#20457d; 
+  
+}
+
+.msgaluno{
+  
+  width: 70% !important;
+  border: 1px solid #9adaf4;; 
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px;
+  text-align: left;
+  float:right;
+  background: rgb(200, 234, 248);
+  color: #6e84a3;
+  box-shadow: 5px 5px 5px #dee0e3;
+  font-size:10pt;
+  
+}
+
+.textareamsg{
+  width: 75% !important; 
+  text-align: left !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.msgescola{
+  
+  width: 70% !important;
+  border: 1px solid #bdbcbc; 
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px;
+  text-align: left;
+  float:left;
+  background: rgb(204, 206, 224);
+  color: #6e84a3;
+  box-shadow: 5px 5px 5px #dee0e3;
+  font-size:10pt;
+  
+}
+
+.divcaixatextareamsg{
+  width: 100% !important; 
+  height: 100px;
+  position: fixed;
+  bottom: 0px;
+  right: -5px;
+}
+.caixatextareamsg{
+  text-align: left;
+}
+#idcadastrarnovorecado{
+ text-align: right; 
+}
+
+#mensagensdetalhe{
+  overflow:auto;
+  border-bottom: 1px solid gray;
+}
+.titulomsg{
+  
+  color: rgb(110, 132, 163);
+  font-family: Cerebri Sans, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 22.5px;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  text-align: left;
+}
+.corpomsg{
+
+  color: rgb(90, 92, 123);
+  font-family: Cerebri Sans, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22.5px;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.rodapedireita{
+  float: right;
+  margin-top: 16px;
+}
+.rodapemsg{
+  
+  color: rgb(110, 132, 163);
+  font-family: Cerebri Sans, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 22.5px;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  text-align: left;
 }

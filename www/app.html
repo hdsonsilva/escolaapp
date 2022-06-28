@@ -55,7 +55,7 @@
       //Atualizando a lista de tarefas para o usuario
       document.addEventListener('show', function(event) {
       
-      $('#buttontop').html("");
+      $('#buttontop').html("<font style='color: #56C2CD !important;'>---</font>");
       //Verifica a pagina selecionada
        controle(event);
 
@@ -163,16 +163,16 @@
       
       <ons-tabbar id="myTabbar" swipeable position="bottom">
 
-        <ons-tab id='activehome' page="html/home_page.html"  active label="Home"  icon="fa-home">
+        <ons-tab id='activehome' page="html/home_page.html"   label="Home" active icon="fa-home">
         </ons-tab>
 
         <ons-tab id='activeAgenda' label="Agenda" page="html/page_agenda.html" icon="fa-calendar">
         </ons-tab>
-        <ons-tab id='activeNotas' page="html/page_notas.html" label="Acadêmico" icon="fa-address-book">
+        <ons-tab id='activeNotas' page="html/page_notas.html" label="Acadêmico"  icon="fa-address-book">
         </ons-tab>
-        <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro" icon="fa-credit-card">
+        <ons-tab id='activeFinanceiro' page="html/page_financeiro.html" label="Financeiro" active icon="fa-credit-card">
         </ons-tab>
-        <ons-tab id='activeBilhetes' page="html/page_bilhetes.html" label="Recados" icon="fa-comment">
+        <ons-tab id='activeBilhetes' page="html/page_bilhetes.html" label="Mensagens" icon="fa-comment">
         </ons-tab>
 
 

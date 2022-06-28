@@ -9,12 +9,13 @@ function view_academico(retornos){
 if(retornos['notas']){
     //Preenchendo a lista com cards
     for(i  in retorno){
-  		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'cor_nota_vermelha' : 'cor_nota_azul' ;
+  		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'baloes_red' : 'baloes_blue' ;
         conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'><font class='font_tam1'>"+(retorno[i]['materia'])+"</font>";
-        conteudo_lista += "<br><font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"</font>";
-        conteudo_lista += "<br><font class='font_tam2 "+class_cor_nota+"'>Nota: " + retorno[i]['nota']+"</font>";
+        conteudo_lista += "<br><hr>";
+        conteudo_lista += "<br><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;Nota: " + retorno[i]['nota']+"&nbsp;&nbsp;</span>";
+        conteudo_lista += "&nbsp;&nbsp;<span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span><br><br>";
         /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
-        conteudo_lista += "<div class='align_direita'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon> Ver</ons-button> </div>";
+        conteudo_lista += "<div class='align_direita'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon> Detalhar</ons-button> </div>";
         conteudo_lista += "</ons-card>";
     }
     //Exibindo os boletos

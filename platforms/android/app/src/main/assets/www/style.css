@@ -93,7 +93,9 @@ ons-splitter-side[side="left"][animation="overlay"] {
   color:#20457d; 
   font-weight: 700;
 }
-
+.bordas{
+  
+}
 .baloes_blue{
   background:#4169E1;
   font-size:11pt;
@@ -102,6 +104,9 @@ ons-splitter-side[side="left"][animation="overlay"] {
   position: relative !important;
   height: 100% !important;
 }
+ .font_users{
+    font-size: 10pt !important;
+ }
 .baloes_green{
   background:#008000;
   font-size:11pt;

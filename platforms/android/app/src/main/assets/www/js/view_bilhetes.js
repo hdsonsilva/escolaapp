@@ -224,11 +224,14 @@ function quebra_de_linha(texto){
 
 function retira_br(texto){
  
-
-    let ocorrencias = (texto.match(/<br>/g) || []).length;
-    for(i = 0 ; i < ocorrencias; i++){
-       texto = texto.replace("<br>"," ");
-    }
+    
+        
+        let ocorrencias = (texto.match(/<br>/g) || []).length;
+    
+        for(i = 0 ; i < ocorrencias; i++){
+           texto = texto.replace("<br>"," ");
+        }
+    
     return texto;
 }
 
@@ -275,8 +278,8 @@ function mensagemAgrupada(dados){
               '</label>' +
               '<div class="center">' +
                 '<font class="msg_titulo">'+dados[0]+'</font>' +
-                '<br><br>' +
-                '<font class="msg_last">'+retira_br(dados[8])+espacos(50)+'</font>' +
+                '' +
+                '<font class="msg_last">'+retira_br(dados[8])+espacos(60)+'</font>' +
               '</div>' +
               '<div class="right">' +
                 (dados[10] == "visto" || dados[10] == "enviado_aluno" ?  '<ons-icon style="color: #DCDCDC; padding-left: 4px" icon="md-ios-comment-text, material:md-comment-text" size="24px, material:24px"></ons-icon>' : '<span class="notification notification--material" style="background:#DC143C;font-size:9pt">1</span>') +
@@ -292,8 +295,8 @@ function mensagemAgrupada(dados){
               '</label><br>' +
               '<div class="center">' +
                 '<font class="msg_titulo">'+dados[1]+'</font>' +
-                '<br><br>' +
-                '<font class="msg_last">'+retira_br(dados[7])+espacos(50)+'</font>' +
+                '' +
+                '<font class="msg_last">'+retira_br(dados[7])+espacos(60)+'</font>' +
               '</div>' +
               '<div class="right">' +
                 (dados[9] == "visto" || dados[9] == "enviado_aluno" ?  '<ons-icon style="color: #DCDCDC; padding-left: 4px" icon="md-ios-comment-text, material:md-comment-text" size="24px, material:24px"></ons-icon>' : '<span class="notification notification--material" style="background:#DC143C;font-size:9pt">1</span>') +

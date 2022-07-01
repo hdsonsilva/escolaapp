@@ -90,7 +90,7 @@ function view_bilhetes(retornos){
             /*Criando seletor de professor e dep*/
             tmp = "";
             tmp += '<select class="select-input" id="destinatario" style="width:90%;">';
-            tmp +=  '<option value="">Departamento/Professor</option>';
+            tmp +=  '<option value="">Selecione</option>';
             tmp +=   montaOptions(retornos['departamentos'], 'dep');
             tmp +=   montaOptions(retornos['docentes'], 'prof');
             tmp +=  "</select>";

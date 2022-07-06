@@ -12,10 +12,10 @@ if(retornos['notas']){
   		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'baloes_red' : 'baloes_blue' ;
         conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'><font class='font_tam1'>"+(retorno[i]['materia'])+"</font>";
         conteudo_lista += "<br><hr>";
-        conteudo_lista += "<br><div style='text-align:center;width:100%'><table width='100%'><tr><td width='50%' align='left'><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;Nota: " + retorno[i]['nota']+"&nbsp;&nbsp;</span></td>";
-        conteudo_lista += "<td width='50%' align='right'><span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span></td></tr></table></div><br>";
+        conteudo_lista += "<br><div style='text-align:center;width:100%'><table width='100%'><tr><td width='50%' align='center'><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;Nota: " + retorno[i]['nota']+"&nbsp;&nbsp;</span></td>";
+        conteudo_lista += "<td width='50%' align='center'><span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span></td></tr></table></div><br>";
         /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
-        conteudo_lista += "<div class='align_center'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon> Ver atividades</ons-button> </div>";
+        conteudo_lista += "<div class='align_center'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon>Detalhar</ons-button> </div>";
         conteudo_lista += "</ons-card>";
     }
     //Exibindo os boletos

@@ -4,6 +4,7 @@
     "com-sarriaroman-photoviewer": "^1.2.5",
     "cordova-android": "^10.0.0",
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-app-version": "^0.1.14",
     "cordova-plugin-camera-preview": "^0.12.3",
     "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-geolocation": "^4.1.0",
@@ -22,7 +23,8 @@
       "cordova-plugin-geolocation": {},
       "com-sarriaroman-photoviewer": {},
       "cordova-plugin-camera-preview": {},
-      "cordova-plugin-device": {}
+      "cordova-plugin-device": {},
+      "cordova-plugin-app-version": {}
     },
     "platforms": [
       "ios"

@@ -82,12 +82,19 @@
         function(){
           
           $('#periodo_letivo > select').html('');
-          for(i = year ; i >= (year-3); i--){
+          for(i = year ; i >= (year-2); i--){
             $('#periodo_letivo > select').html($('#periodo_letivo').html()+ "<option value='"+i+"'>"+i+"</option>");
             
           }
 
           $('#periodo_letivo').val(localStorage.getItem('periodoletivo'));
+
+          //Incluindo versao no app
+          document.addEventListener('deviceready', function () {
+            cordova.getAppVersion.getVersionNumber().then(function (version) {
+              $('#VersaoSoftware').html("Versão App "+version);
+            });
+          });
         },
         500);
 

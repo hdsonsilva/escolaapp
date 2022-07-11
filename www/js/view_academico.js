@@ -8,14 +8,26 @@ function view_academico(retornos){
    console.log(retornos);
 if(retornos['notas']){
     //Preenchendo a lista com cards
+    conteudo_lista += "<ons-card>";
+    conteudo_lista += "";
+    conteudo_lista += "<div style='text-align:center;width:100%'><table width='100%'><tr>";
+    conteudo_lista += "<td width='40%' align='left'><font class='font_notastam1'>Matéria/ Disciplina</font></td>";
+    conteudo_lista += "<td width='25%' align='center'><font class='font_notastam1'>Notas</font></td>";
+    conteudo_lista += "<td width='20%' align='center'><font class='font_notastam1'>Faltas</font></td>";
+    conteudo_lista += "<td width='15%' align='center'><font class='font_notastam1'>Ver</font></td>";
+    conteudo_lista += "</tr></table></div>";
+    /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
+    conteudo_lista += "</ons-card>";
     for(i  in retorno){
   		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'baloes_red' : 'baloes_blue' ;
-        conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'><font class='font_tam1'>"+(retorno[i]['materia'])+"</font>";
-        conteudo_lista += "<br><hr>";
-        conteudo_lista += "<br><div style='text-align:center;width:100%'><table width='100%'><tr><td width='50%' align='center'><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;Nota: " + retorno[i]['nota']+"&nbsp;&nbsp;</span></td>";
-        conteudo_lista += "<td width='50%' align='center'><span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>Faltas: " + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span></td></tr></table></div><br>";
-        /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
-        conteudo_lista += "<div class='align_center'><ons-button class='minhalinhadigitavel'><ons-icon icon='fa-list'></ons-icon>Detalhar</ons-button> </div>";
+        conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'>";
+        conteudo_lista += "";
+        conteudo_lista += "<div style='text-align:center;width:100%'><table width='100%'><tr>";
+        conteudo_lista += "<td width='40%' align='left'><font class='font_tam1'>"+(retorno[i]['materia'])+"</font></td>";
+        conteudo_lista += "<td width='25%' align='center'><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;" + retorno[i]['nota'].replace(".",",")+"&nbsp;&nbsp;</span></td>";
+        conteudo_lista += "<td width='20%' align='center'><span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>" + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span></td>";
+        conteudo_lista += "<td width='15%' align='center'><ons-button><ons-icon icon='md-plus-circle'></ons-icon></ons-button></td>";
+        conteudo_lista += "</tr></table></div>";
         conteudo_lista += "</ons-card>";
     }
     //Exibindo os boletos

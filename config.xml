@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.agenda.liber2" version="2.8.0" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <name>Agenda Escola Líber 2.0</name>
-    <description>
+    <description> 
         Aplicativo da Escola Liber. Acompanhe a vida escolar dos seus filhos de onde estiver.
     </description>
     <author email="contato@doctum.edu.br" href="http://www.doctum.edu.br">

@@ -1,4 +1,4 @@
-function login(usuario, senha, app_, unidade, nome){
+function login(usuario, senha, app_, unidade, nome, foto){
 
         var username = usuario ;
         var password = senha ;
@@ -8,6 +8,7 @@ function login(usuario, senha, app_, unidade, nome){
         localStorage.setItem('login_password', password);
         localStorage.setItem('login_nome', nome);
         localStorage.setItem('unidade', unidade);
+        localStorage.setItem('foto', foto);
       
 
       $.ajax({
@@ -102,6 +103,7 @@ function buscarDadosUsuario(codigo){
       localStorage.setItem('login_password',  usuarios[i]['senha']);
       localStorage.setItem('login_unidade',   usuarios[i]['unidade']);
       localStorage.setItem('login_nome',      usuarios[i]['nome']);
+      localStorage.setItem('login_foto',      usuarios[i]['foto']);
     }
   }
 }

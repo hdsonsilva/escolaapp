@@ -88,10 +88,11 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 
 .font_tam1{
-  font-size: 12pt;
+  font-size: 15pt;
   text-align: left;
   color:#20457d; 
   font-weight: 700;
+  padding-top: 6px;
 }
 .bordas{
   

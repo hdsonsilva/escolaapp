@@ -1,8 +1,27 @@
 function view_home(retornos){
+    let img ;
+    let tabela ; 
 
     //Alterando título do app
     $('#tituloApp').html(appName);
-    $('#idNome').html(localStorage.getItem("login_nome"));
+
+    img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+    
+    if(img != ""){
+        tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";
+        tabela += "<td width='20%' height='70px' align='left'>"+img+"</td>";
+        tabela += "<td width='80%' align='center'><font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
+        tabela += "</tr></table></div>";
+    }
+    else{
+        tabela =  "<div style='text-align:center;width:100%'><table width='100%'><tr>";
+        tabela += "<td width='100%' align='center'><font class='font_notastam1'>"+(localStorage.getItem("login_nome"))+"</font></td>";
+        tabela += "</tr></table></div>";
+    }
+    
+
+    $('#idNome').html(tabela);
+    //$('#idNome').html(img+localStorage.getItem("login_nome"));
 
     var i ;
     var conteudo_lista = '';

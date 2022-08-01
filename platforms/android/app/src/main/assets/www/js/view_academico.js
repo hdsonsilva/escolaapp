@@ -1,7 +1,8 @@
 function view_academico(retornos){
-    var i ;
-    var conteudo_lista = '';
-    var retorno = retornos['notas'];
+    let i ;
+    
+    let conteudo_lista = '';
+    let retorno = retornos['notas'];
     //Alterando título do app
     
     $('#tituloApp').html("Notas e Frequência");
@@ -19,6 +20,7 @@ if(retornos['notas']){
     /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
     conteudo_lista += "</ons-card>";
     for(i  in retorno){
+        tmp = retorno[i];
   		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'baloes_red' : 'baloes_blue' ;
         conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'>";
         conteudo_lista += "";

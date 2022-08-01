@@ -1,7 +1,8 @@
 function view_academico(retornos){
-    var i ;
-    var conteudo_lista = '';
-    var retorno = retornos['notas'];
+    let i ;
+    
+    let conteudo_lista = '';
+    let retorno = retornos['notas'];
     //Alterando título do app
     
     $('#tituloApp').html("Notas e Frequência");
@@ -19,11 +20,12 @@ if(retornos['notas']){
     /*conteudo_lista += "<br><font class='font_tam2'>Média da turma: " + (retorno[i]['media'])+"</font>";*/
     conteudo_lista += "</ons-card>";
     for(i  in retorno){
+        tmp = retorno[i];
   		class_cor_nota =  retorno[i]['cor'] == 'danger' ? 'baloes_red' : 'baloes_blue' ;
         conteudo_lista += "<ons-card class='click_detalhe_nota' valor='"+(i)+"'>";
         conteudo_lista += "";
         conteudo_lista += "<div style='text-align:center;width:100%'><table width='100%'><tr>";
-        conteudo_lista += "<td width='40%' align='left'><font class='font_tam1'>"+(retorno[i]['materia'])+"</font></td>";
+        conteudo_lista += "<td width='40%' height='80px' align='left'><font class='font_tam3'>"+(retorno[i]['materia'])+"</font></td>";
         conteudo_lista += "<td width='25%' align='center'><span class='notification notification--material "+class_cor_nota+"' >&nbsp;&nbsp;" + retorno[i]['nota'].replace(".",",")+"&nbsp;&nbsp;</span></td>";
         conteudo_lista += "<td width='20%' align='center'><span class='notification notification--material baloes_gray'>&nbsp;&nbsp;<font class='font_tam2'>" + retorno[i]['faltas']+"&nbsp;&nbsp;</font></span></td>";
         conteudo_lista += "<td width='15%' align='center'><ons-button><ons-icon icon='md-plus-circle'></ons-icon></ons-button></td>";

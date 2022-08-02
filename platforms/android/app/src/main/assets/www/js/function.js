@@ -364,3 +364,31 @@ function showModal(controle) {
               async:true //Não esperar retorno para continuar codigo
           }); 
     }
+
+function sistemaoperacional(){
+      var navegadores = "";
+      var nav, sist ;  
+
+      if (navegadores = navigator.userAgent.toLowerCase().indexOf('op') > -1) {
+          nav = "Opera";
+          sist = 'Browser';
+      }else if (navegadores = navigator.userAgent.indexOf('MSIE') > -1) {
+          nav = "Internet Explorer ou Edge";
+          sist = 'Browser';
+      }else if (navegadores = navigator.userAgent.indexOf('Firefox') > -1) {
+          nav = "Mozilla Firefox";
+          sist = 'Browser';
+      }else if (navegadores = navigator.userAgent.indexOf('Epiphany') > -1) {
+          nav = "Epiphany";
+          sist = 'Browser';
+      }else if (navegadores = navigator.userAgent.indexOf('Chrome') > -1) {
+          nav = "Google Chome";
+          sist = 'Android' ;
+      }else if (navegadores = navigator.userAgent.indexOf('Safari') > -1) {
+          nav = "Safari";
+          sist = 'Ios';
+      }
+
+      alert(nav);
+      return sist;
+}

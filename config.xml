@@ -45,7 +45,9 @@
         <preference name="InterceptRemoteRequests" value="all" />
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
-        
+        <gap:config-file parent="ITSAppUsesNonExemptEncryption" platform="ios">
+            <false/>
+        </gap:config-file>
         <config-file overwrite="true" parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
             <string>A camera é usada opcionalmente para incluir foto do estudante em seu perfil</string>
         </config-file>

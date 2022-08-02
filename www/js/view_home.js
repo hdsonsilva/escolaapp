@@ -1,11 +1,13 @@
 function view_home(retornos){
-    let img ;
+    let img = "";
     let tabela ; 
 
     //Alterando título do app
     $('#tituloApp').html(appName);
 
-    img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+    //if(sistemaoperacional() != 'Ios'){
+        img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+    //}
     
     if(img != ""){
         tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";

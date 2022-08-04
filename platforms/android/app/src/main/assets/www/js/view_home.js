@@ -1,11 +1,15 @@
 function view_home(retornos){
-    let img ;
+    let img = "";
     let tabela ; 
+
+   
 
     //Alterando título do app
     $('#tituloApp').html(appName);
 
-    img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+    //if(sistemaoperacional() != 'Ios'){
+        img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+    //}
     
     if(img != ""){
         tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";
@@ -30,15 +34,18 @@ function view_home(retornos){
     var i ;
     var conteudo_lista = '';
     var imagem_view = '';
+    let imagembusca = '';
  if(retornos['murais']){     
     //Preenchendo a lista com cards
     for(i  in retorno){
 
         conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelhome' valor='"+(retorno[i]['url_destino'])+"'" : (retorno[i]['arquivo'] ? "class='imagemview' imagem='"+(retorno[i]['arquivo'])+"'" : " ")  )+"><font class='font_tam1'><span class='notification notification--material baloes_blue'>&nbsp;&nbsp;"+(retorno[i]['data_inicio'])+"&nbsp;&nbsp;</span>  <font class='font_tam3'>"+(retorno[i]['assunto'])+"</font> </font>";
         conteudo_lista += "<br><br>";
-        conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<img width='100%' src='"+(retorno[i]['arquivo']).replace("http://", "https://")+"' loading='lazy'><br>" : "")+quebraLinha(retorno[i]['mensagem'])+"</font>";
+        conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<div id='notimg_"+i+"'><img width='100%' pos='"+i+"' src='./img/icon_image.gif'></div><div id='myimg_"+i+"' ><img width='1%'  class='imagens' pos='"+i+"' src='"+(retorno[i]['arquivo']).replace("http://", "https://")+"' loading='lazy'></div><br>" : "")+quebraLinha(retorno[i]['mensagem'])+"</font>";
         conteudo_lista += "</ons-card>";
+        imagembusca = retorno[i]['arquivo'] ? retorno[i]['arquivo'] : imagembusca ;
     }
+
 
 
     $('#homePageList').html(conteudo_lista);
@@ -47,6 +54,20 @@ function view_home(retornos){
         
         abrirURL($(this).attr('valor'), 1);
     });
+    //Fazendo aparecer as imagens
+    
+    
+        $('body').off('load', '.imagens');
+        $('.imagens').on('load',function(){
+            let este = $(this);
+            let pos = $(this).attr('pos');
+            //alert('ok');
+            //alert(pos);
+            $('#notimg_'+pos).hide();
+            este.width('100%');
+            $('#myimg_'+pos).show();
+        });
+    
 
     $('.imagemview').click(function(){
              

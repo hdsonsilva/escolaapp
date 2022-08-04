@@ -8,9 +8,9 @@ function login(usuario, senha, app_, unidade, nome, foto){
         localStorage.setItem('login_password', password);
         localStorage.setItem('login_nome', nome);
         localStorage.setItem('unidade', unidade);
-
+        alert(foto);
         //if(sistemaoperacional() != 'Ios'){
-          localStorage.setItem('foto', foto);
+          //localStorage.setItem('foto', foto);
        // }
 
       

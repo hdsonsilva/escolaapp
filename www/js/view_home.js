@@ -8,7 +8,7 @@ function view_home(retornos){
     $('#tituloApp').html(appName);
 
     //if(sistemaoperacional() != 'Ios'){
-        img = localStorage.getItem('login_foto') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('login_foto')+"'>" : "";
+        img = localStorage.getItem('imagem') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('imagem')+"'>" : "";
     //}
     
     if(img != ""){
@@ -41,7 +41,7 @@ function view_home(retornos){
 
         conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelhome' valor='"+(retorno[i]['url_destino'])+"'" : (retorno[i]['arquivo'] ? "class='imagemview' imagem='"+(retorno[i]['arquivo'])+"'" : " ")  )+"><font class='font_tam1'><span class='notification notification--material baloes_blue'>&nbsp;&nbsp;"+(retorno[i]['data_inicio'])+"&nbsp;&nbsp;</span>  <font class='font_tam3'>"+(retorno[i]['assunto'])+"</font> </font>";
         conteudo_lista += "<br><br>";
-        conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<div id='notimg_"+i+"'><img width='100%' pos='"+i+"' src='./img/icon_image.gif'></div><div id='myimg_"+i+"' ><img width='1%'  class='imagens' pos='"+i+"' src='"+(retorno[i]['arquivo']).replace("http://", "https://")+"' loading='lazy'></div><br>" : "")+quebraLinha(retorno[i]['mensagem'])+"</font>";
+        conteudo_lista += "<font class='font_text'>"+(retorno[i]['arquivo'] ? "<div id='notimg_"+i+"'><img width='100%' pos='"+i+"' src='./img/carregando.gif'></div><div id='myimg_"+i+"' ><img width='1%'  class='imagens' pos='"+i+"' src='"+(retorno[i]['arquivo']).replace("http://", "https://")+"' loading='lazy'></div><br>" : "")+quebraLinha(retorno[i]['mensagem'])+"</font>";
         conteudo_lista += "</ons-card>";
         imagembusca = retorno[i]['arquivo'] ? retorno[i]['arquivo'] : imagembusca ;
     }

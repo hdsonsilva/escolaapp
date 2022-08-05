@@ -1,4 +1,4 @@
-function login(usuario, senha, app_, unidade, nome, foto){
+function login(usuario, senha, app_, unidade, nome){
 
         var username = usuario ;
         var password = senha ;
@@ -8,10 +8,7 @@ function login(usuario, senha, app_, unidade, nome, foto){
         localStorage.setItem('login_password', password);
         localStorage.setItem('login_nome', nome);
         localStorage.setItem('unidade', unidade);
-        alert(foto);
-        //if(sistemaoperacional() != 'Ios'){
-          //localStorage.setItem('foto', foto);
-       // }
+       
 
       
 
@@ -37,6 +34,9 @@ function login(usuario, senha, app_, unidade, nome, foto){
               ons.notification.toast('Login efetuado com sucesso.', {timeout: 1000});
                //Armazenando o token
               localStorage.setItem('token',ret.token);
+              if(ret.imagem){
+                localStorage.setItem('imagem',ret.imagem);
+              }
 
               if(debug == 1){
                 
@@ -107,7 +107,6 @@ function buscarDadosUsuario(codigo){
       localStorage.setItem('login_password',  usuarios[i]['senha']);
       localStorage.setItem('login_unidade',   usuarios[i]['unidade']);
       localStorage.setItem('login_nome',      usuarios[i]['nome']);
-      localStorage.setItem('login_foto',      usuarios[i]['foto']);
     }
   }
 }

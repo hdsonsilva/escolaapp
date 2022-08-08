@@ -8,13 +8,13 @@ function view_home(retornos){
     $('#tituloApp').html(appName);
 
     //if(sistemaoperacional() != 'Ios'){
-        img = localStorage.getItem('imagem') != 'undefined' ? "<img height='70px' src='"+localStorage.getItem('imagem')+"'>" : "";
+        img = localStorage.getItem('imagem') != 'undefined' ? "<img class='imagem' height='70px' src='"+localStorage.getItem('imagem')+"'>" : "";
     //}
     
     if(img != ""){
         tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";
-        tabela += "<td width='20%' height='70px' align='left'>"+img+"</td>";
-        tabela += "<td width='80%' align='center'><font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
+        tabela += "<td width='20%' height='70px' align='right'>"+img+"&nbsp;</td>";
+        tabela += "<td width='80%' align='left'>&nbsp;<font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
         tabela += "</tr></table></div>";
     }
     else{

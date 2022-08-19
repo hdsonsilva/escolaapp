@@ -173,8 +173,12 @@
     });
 
     $('#iniciarcamera').click(function(){
-      $('.escolherfoto').hide();
+    $('.escolherfoto').hide();
       
+    $('.positioncontrolcamera').show();
+    $('.positioncontrolcamerabotton').show();
+    $('.positioncontrolcamerabottonvoltar').show();
+    $('.positioncontrolcamerabottonswitch').show();
       //$('#foto_upload').trigger('click');
       let altura, largura, larguracamera ;
       
@@ -194,12 +198,9 @@
       storeToFile: false,
       disableExifHeaderStripping: false
     };
-
+    
     CameraPreview.startCamera(options, function(){
-        $('.positioncontrolcamera').show();
-        $('.positioncontrolcamerabotton').show();
-        $('.positioncontrolcamerabottonvoltar').show();
-         $('.positioncontrolcamerabottonswitch').show();
+        
     });
 
     
@@ -278,7 +279,7 @@
         
         <p style='margin-bottom: 40px;position:relative'>
           <div id='imagemCadastro'>
-          <img src='./img/LogoSemNome100x153.png' width="17%">
+          <img src='./img/LogoSemNome100x153.png' width="7%">
         </div>
         </p>
         
@@ -290,7 +291,7 @@
         </p> 
         <p style='margin-bottom: 40px;position:relative;'>
           <div >
-            <img id='alterarfoto' class='list-item_foto' src='./img/perfil2.png'>
+            <img id='alterarfoto' class='list-item_foto' width='90px' height='160px' style='width: 90px !important;height: 120px !important;' src='./img/perfil2.png'>
           </div>
           <div style='display: none'><input id="foto_upload" type="file"></div>
         </p>

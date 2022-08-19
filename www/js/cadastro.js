@@ -111,9 +111,9 @@ function cadastro(unidade, usuario, senha, foto, app_){
                                   'codigo' : codigo, 
                                   'nome':ret.nome_aluno,
                                   'unidade': unidade, 
-                                  'usuario' : ret.ra, 
-                                  'senha' : password,
-                                  'foto'  : foto
+                                  'usuario': ret.ra, 
+                                  'senha'  : password,
+                                  'foto'   : foto
                                 };  
                     
                     
@@ -130,7 +130,7 @@ function cadastro(unidade, usuario, senha, foto, app_){
                         type: 'POST',
                         url : server1 + unidade + '/' + url_upload_foto + '?apitoken='+ ret.token+'&periodo_letivo='+localStorage.getItem('periodoletivo'),
                         cache: false,
-                        timeout: 30000,
+                        timeout: 60000,
                         dataType:'json',
                         async: true,
                         data: {
@@ -141,8 +141,13 @@ function cadastro(unidade, usuario, senha, foto, app_){
                                   ons.notification.toast(msg, {timeout: 3000});
                                   $('#button').show();
                                   setTimeout(direcionar, 1000, './index.html');
-                                }
-                        });
+                        },
+                        error:function(e){
+                          $('#progress').hide();
+                          ons.notification.toast('Falha ao conectar. Verifique sua conexão.', {timeout: 3000});
+                          $('#button').show();
+                        }
+                      });
                     }
                     //Se não houver continua  o login
                     else{

@@ -1,7 +1,10 @@
 /*****************
  *** Custom CSS ***
  *****************/
-
+.imagem{
+  border-radius: 15px;
+  
+}
 ons-input[type=text] {
   width: 90%;
 }

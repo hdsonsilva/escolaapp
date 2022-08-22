@@ -86,6 +86,16 @@
     var foto;
     auth_check = 0 ;
 
+    document.addEventListener('deviceready', function () {
+
+        if(device.platform.toUpperCase() === 'ANDROID'){
+
+        }
+        else{
+          $('#iniciargaleria').hide();
+        }
+
+    });
     
     $(document).ready(function(){
 
@@ -153,7 +163,7 @@
     $('#iniciargaleria').click(function(){
       $('.escolherfoto').hide();
       $('#foto_upload').trigger('click'); 
-      
+
       /*alert('buscando galeria');
       
       cordova.plugins.photoLibrary.getLibrary(

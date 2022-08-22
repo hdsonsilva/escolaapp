@@ -1,6 +1,18 @@
 /*****************
  *** Custom CSS ***
  *****************/
+
+.paddingios{
+  --varA: constant(safe-area-inset-top);
+  --varB: env(safe-area-inset-top);
+  padding-top: calc( var(--varA) * 3 );
+  padding-top: calc( var(--varB) * 3 );  
+}
+.tabbar{
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 .imagem{
   border-radius: 15px;
   
@@ -37,6 +49,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 
 .modificarcor{
   background: #56C2CD !important;
+  font-color: white !important;
 }
 .naoquebrar{
   display: inline;
@@ -196,8 +209,8 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 .positionbottom{
         position: fixed;
-        bottom: 15px;
-        right: 15px;
+        bottom: 30px;
+        right: 30px;
 }
 
 .positionbottomacimamenu{

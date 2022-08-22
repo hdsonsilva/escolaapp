@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
@@ -57,17 +58,17 @@
 
 </head>
 <body>
-<ons-page  modifier="menu-page" >
-    <ons-toolbar>
+<ons-page  modifier="menu-page" class='modificarcor'>
+    <ons-toolbar class="modificarcor paddingios">
       <div class="left">
                      <!-- Toolbar-button  only visible for iOS/other. -->
         <ons-toolbar-button id="bt_voltar" component="buttonreload">
           <!--<ons-icon icon="fa-undo"></ons-icon>-->
-           <ons-icon icon="md-arrow-left"></ons-icon>
+           <ons-icon icon="md-arrow-left" style='color: white !important;'></ons-icon>
         </ons-button>
       </div>
 
-      <div class="center">Usuários</div>
+      <div class="center"><font style="color: white !important;">Usuários</font></div>
 
       <div class="right">
                      
@@ -85,6 +86,16 @@
     var foto;
     auth_check = 0 ;
 
+    document.addEventListener('deviceready', function () {
+
+        if(device.platform.toUpperCase() === 'ANDROID'){
+
+        }
+        else{
+          $('#iniciargaleria').hide();
+        }
+
+    });
     
     $(document).ready(function(){
 
@@ -152,6 +163,7 @@
     $('#iniciargaleria').click(function(){
       $('.escolherfoto').hide();
       $('#foto_upload').trigger('click'); 
+
       /*alert('buscando galeria');
       
       cordova.plugins.photoLibrary.getLibrary(

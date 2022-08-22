@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
   <title>Agenda Escola Liber</title>
   <link rel="preload" as="image" href="./img/camera2.jpg">
 <script src="./cordova.js"></script> 
@@ -136,15 +137,15 @@
   <!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
   <template id="tabbar.html">
     <ons-page id="tabbarPage">
-     <ons-toolbar class='modificarcor'>
+     <ons-toolbar class='modificarcor paddingios'>
         <div class="left" id='ladoesquerdo'>
           <!-- Toolbar-button with different icons depending on the platform. -->
-          <ons-toolbar-button component="button/menu">
-            <ons-icon style="color:white;" icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
+          <ons-toolbar-button component="button/menu" style="height: 26px;">
+            <ons-icon style="color:white;vertical-align: bottom;" icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
           </ons-toolbar-button>
         </div>
         <div class="center" id="tituloApp_">
-            <img src='./img/topo.png' height="40px">
+            <img src='./img/topo.png' height="40px" style="vertical-align: bottom;">
         </div>
         <div class="right" id="buttontop" style="text-align: right;padding-right: 10px;color:white;">
          
@@ -179,7 +180,7 @@
       -->
       <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
       
-      <ons-tabbar id="myTabbar" swipeable position="bottom">
+      <ons-tabbar id="myTabbar" swipeable position="bottom" >
 
         <ons-tab id='activehome' page="html/home_page.html" active  label="Home" active icon="fa-home">
         </ons-tab>

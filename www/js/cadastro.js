@@ -113,7 +113,7 @@ function cadastro(unidade, usuario, senha, foto, app_){
                                   'unidade': unidade, 
                                   'usuario': ret.ra, 
                                   'senha'  : password,
-                                  'foto'   : foto
+                                  'foto'   : 'sim'
                                 };  
                     
                     
@@ -199,7 +199,8 @@ function exibir_usuarios(usuarios){
   for(i in usuarios){
       
     if(usuarios[i]['foto']){
-      foto = usuarios[i]['foto'];
+      //foto = usuarios[i]['foto'];
+      foto = server_base_foto + usuarios[i]['unidade'] + "/" + usuarios[i]['usuario'] + ".jpg";
     }
     else{
       foto = './img/quad.png';

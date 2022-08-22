@@ -137,7 +137,7 @@
   <!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
   <template id="tabbar.html">
     <ons-page id="tabbarPage">
-     <ons-toolbar class='modificarcor'>
+     <ons-toolbar class='modificarcor'  style="height: 50px; padding-top: 20px;">
         <div class="left" id='ladoesquerdo'>
           <!-- Toolbar-button with different icons depending on the platform. -->
           <ons-toolbar-button component="button/menu">
@@ -180,7 +180,7 @@
       -->
       <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
       
-      <ons-tabbar id="myTabbar" swipeable position="bottom">
+      <ons-tabbar id="myTabbar" swipeable position="bottom" >
 
         <ons-tab id='activehome' page="html/home_page.html" active  label="Home" active icon="fa-home">
         </ons-tab>

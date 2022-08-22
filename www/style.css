@@ -1,6 +1,14 @@
 /*****************
  *** Custom CSS ***
  *****************/
+.paddingbody{
+  margin-top:12px;
+  margin-bottom: 12px;
+}
+.tabbar{
+  padding-bottom: 20px;
+}
+
 .imagem{
   border-radius: 15px;
   
@@ -197,8 +205,8 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 .positionbottom{
         position: fixed;
-        bottom: 15px;
-        right: 15px;
+        bottom: 30px;
+        right: 30px;
 }
 
 .positionbottomacimamenu{

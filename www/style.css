@@ -5,6 +5,7 @@
   padding-top: 20px;
   height: 75px;
 }
+
 body{
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);

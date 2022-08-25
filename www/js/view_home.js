@@ -12,7 +12,7 @@ function view_home(retornos){
     //}
     
     if(img != ""){
-        tabela  = "<div style='text-align:center;width:100%'><br><br><br><br><table width='100%'><tr>";
+        tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";
         tabela += "<td width='20%' height='70px' align='right'>"+img+"&nbsp;</td>";
         tabela += "<td width='80%' align='left'>&nbsp;<font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
         tabela += "</tr></table></div>";

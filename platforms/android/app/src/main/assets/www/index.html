@@ -86,22 +86,11 @@
         $('.calcular').width( ($('.modificarcor').width()));
       //Em meio segundo  
       setTimeout(function(){
-        //Excluindo DIVS automaticas do framework
-        $('#remover1').remove();
-        $('#remover2').remove();
-        $('#remover3').remove();
+        
+        $('body').height('100%');
 
-        $('.calcular').width( ($('.modificarcor').width()));
       }, 500);
-      //Em 2 segundos
-      setTimeout(function(){
-        //Excluindo DIVS automaticas do framework
-        $('#remover1').remove();
-        $('#remover2').remove();
-        $('#remover3').remove();
-
-        $('.calcular').width( ($('.modificarcor').width()));
-      }, 2000);
+      
 
       //Verificando usuarios salvos
       if(localStorage.getItem('usuarios_salvos')){
@@ -174,22 +163,20 @@
 
   <ons-page class='modificarcor'>
    <ons-toolbar  class='modificarcor paddingios padding_padrao' >
-        <div class="naoquebrar calcular" style="text-align:center; margin-top: 18px;" id="tituloApp_" >
-          <img src='./img/topo.png'  height="40px" style="vertical-align: bottom !important;"> 
+        <div class="naoquebrar calcular" style="height: 40px; " id="tituloApp_" >
+          <img src='./img/topo.png'  height="40px" style='vertical-align: bottom;'> 
         </div>
           </ons-button>
-        <div class="left"   id='remover1'></div>
-        <div class="right"  id='remover2'></div>
-        <div class="center" id='remover3'></div>
+        
       </ons-toolbar>
   <div class=''>
-  <!-- <ons-list>
+  <ons-list>
     <ons-list-item>
       <div style="width:100%;text-align: center;">
         
       </div>
     </ons-list-item>
-  </ons-list> -->
+  </ons-list>
   <ons-list id='exibicao_usuarios' class='paddingnosso'>
     
   </ons-list>

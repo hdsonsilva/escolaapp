@@ -2,10 +2,20 @@
  *** Custom CSS ***
  *****************/
 .padding_padrao{
-  padding-top: 20px;
-  height: 75px;
+  height: 90px;
+  position: absolute;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 50px;
 }
-
+.naoquebrar{
+  display: table-cell !important;
+  text-align: center !important;
+  vertical-align: bottom !important; 
+  bottom: 0px !important;
+  position: absolute;
+}
+ 
 body{
     padding-top: 20px;
     /*padding-top: constant(safe-area-inset-top);
@@ -54,9 +64,6 @@ ons-splitter-side[side="left"][animation="overlay"] {
 .modificarcor{
   background: #56C2CD !important;
   font-color: white !important;
-}
-.naoquebrar{
-  display: inline;
 }
 
 .highlight {

@@ -251,7 +251,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 .positioncontrolcamerabotton{
   position: absolute;
   right:    10px;
-  bottom:   10px;
+  bottom:   50px;
   width: 100%;
   height:40px;
   padding-top: 10px;
@@ -262,7 +262,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 .positioncontrolcamerabottonvoltar{
   position: absolute;
   right:    20px;
-  bottom:   10px;
+  bottom:   50px;
   height:40px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -271,7 +271,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 .positioncontrolcamerabottonswitch{
   position: absolute;
   left:    20px;
-  bottom:   10px;
+  bottom:   50px;
   height:40px;
   padding-top: 10px;
   padding-bottom: 10px;

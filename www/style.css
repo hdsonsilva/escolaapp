@@ -2,7 +2,7 @@
  *** Custom CSS ***
  *****************/
 .padding_padrao{
-  height: 50px;
+  height: 80px;
   position: absolute !important;
   text-align: center;
   vertical-align: bottom;
@@ -17,8 +17,8 @@
   position: absolute;
 }
  
-body{
-    height: 100vh;
+html, body{
+    height: 100vh ;
     /*padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);*/
 }

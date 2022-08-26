@@ -1,6 +1,10 @@
 /*****************
  *** Custom CSS ***
  *****************/
+#buttontop{
+  margin-right: 10px;
+}
+
 .padding_padrao{
   height: 80px;
   position: absolute !important;
@@ -494,7 +498,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 
 .textareamsg{
-  width: 75% !important; 
+  width: 90% !important; 
   text-align: left !important;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -518,8 +522,9 @@ ons-splitter-side[side="left"][animation="overlay"] {
 
 .divcaixatextareamsg{
   width: 100% !important; 
-  height: 100px;
-  position: fixed;
+  height: 150px;
+  position: relative;
+  text-align: center;
   bottom: 0px;
   right: -5px;
 }

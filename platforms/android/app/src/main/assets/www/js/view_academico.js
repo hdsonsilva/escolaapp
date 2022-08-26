@@ -8,6 +8,7 @@ function view_academico(retornos){
     $('#tituloApp').html("Notas e Frequência");
    console.log(retornos);
 if(retornos['notas']){
+    conteudo_lista = "<br><br>";
     //Preenchendo a lista com cards
     conteudo_lista += "<ons-card>";
     conteudo_lista += "";

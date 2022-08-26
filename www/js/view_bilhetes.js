@@ -17,6 +17,7 @@ function view_bilhetes(retornos){
     if(retorno && retorno != ''){    
         
         //Preenchendo a lista com cards
+        conteudo_lista = "<br><br>";
         for(i  in retorno){
             console.log(retorno);
 
@@ -141,7 +142,7 @@ function view_bilhetes(retornos){
             });
             
 
-            $('#mensagensdetalhe').height( ($('#pageNovoRecado').height() - $('#titulomsg').height() - $('#mensagemnovorecado').height() - 50)  );
+            $('#mensagensdetalhe').height( ($('#pageNovoRecado').height() - $('#titulomsg').height() - $('#mensagemnovorecado').height() - 100)  );
 
             buscarMensagensDetalhadas(msgs,tipocontato, codigocontato,docentes);
             

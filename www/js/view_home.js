@@ -42,6 +42,7 @@ function view_home(retornos){
         conteudo_lista += "</ons-card>";*/
  if(retornos['murais']){     
     //Preenchendo a lista com cards
+    conteudo_lista = "<br><br>";
     for(i  in retorno){
 
         conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelhome' valor='"+(retorno[i]['url_destino'])+"'" : (retorno[i]['arquivo'] ? "class='imagemview' imagem='"+(retorno[i]['arquivo'])+"'" : " ")  )+"><font class='font_tam1'><span class='notification notification--material baloes_blue'>&nbsp;&nbsp;"+(retorno[i]['data_inicio'])+"&nbsp;&nbsp;</span>  <font class='font_tam3'>"+(retorno[i]['assunto'])+"</font> </font>";

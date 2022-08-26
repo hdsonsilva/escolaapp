@@ -18,6 +18,7 @@ conteudo_lista += "</ons-card>";
 if(retornos['boletos'].length > 0 ){
     retorno.reverse();
     //Preenchendo a lista com cards
+    conteudo_lista = "<br><br>";
     for(i  in retorno){
 
         tmp = retorno[i]['vencimento'].split("/");

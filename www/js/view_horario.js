@@ -18,7 +18,7 @@ function view_horario(retornos){
     //Preenchendo a lista com cards
 
     if(retornos['gradeHoraria']){ 
-
+        conteudo_lista = "<br><br>";
         for(i  in retorno){
             tmp = retorno[i];
             if(tmp[0]['abreviatura']){

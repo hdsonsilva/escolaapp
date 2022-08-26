@@ -11,6 +11,7 @@ function view_agenda(retornos){
     //Preenchendo a lista com cards
 
     if(retornos['murais']){ 
+        conteudo_lista = "<br><br>";
         for(i  in retorno){
 
             conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelagenda' valor='"+(retorno[i]['url_destino'])+"'" : (retorno[i]['arquivo'] ? "class='imagemview' imagem='"+(retorno[i]['arquivo'])+"'" : " "))+"><font class='font_tam3'><span class='notification notification--material baloes_blue'>&nbsp;&nbsp;"+(retorno[i]['data_referente'])+"&nbsp;&nbsp;</span>&nbsp;&nbsp;"+(retorno[i]['assunto'])+"</font>";

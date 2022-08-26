@@ -3,10 +3,10 @@
  *****************/
 .padding_padrao{
   height: 90px;
-  position: absolute;
+  position: absolute !important;
   text-align: center;
   vertical-align: bottom;
-  padding-top: 50px;
+  padding-top: 50px !important;
 }
 
 .naoquebrar{

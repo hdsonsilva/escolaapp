@@ -89,9 +89,10 @@
     document.addEventListener('deviceready', function () {
 
         if(device.platform.toUpperCase() === 'ANDROID'){
-
+          $('.padding_padrao').height('80px'); 
         }
         else{
+          $('.padding_padrao').height('50px');
           $('#iniciargaleria').hide();
         }
 

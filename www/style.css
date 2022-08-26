@@ -2,11 +2,11 @@
  *** Custom CSS ***
  *****************/
 .padding_padrao{
-  height: 90px;
+  height: 80px;
   position: absolute !important;
   text-align: center;
   vertical-align: bottom;
-  padding-top: 50px !important;
+  padding-top: 40px !important;
 }
 
 .naoquebrar{

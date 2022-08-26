@@ -8,13 +8,13 @@ function view_home(retornos){
     $('#tituloApp').html(appName);
 
     //if(sistemaoperacional() != 'Ios'){
-        img = localStorage.getItem('imagem') != 'undefined' ? "<img class='imagem' height='70px' src='"+localStorage.getItem('imagem')+"'>" : "";
+        img = localStorage.getItem('imagem') != 'undefined' ? "<img class='imagem' height='70px' style='vertical-align:middle' src='"+localStorage.getItem('imagem')+"'>" : "";
     //}
     
     if(img != ""){
         tabela  = "<div style='text-align:center;width:100%'><table width='100%'><tr>";
-        tabela += "<td width='20%' height='70px' align='right'>"+img+"&nbsp;</td>";
-        tabela += "<td width='80%' align='left'>&nbsp;<font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
+        tabela += "<td width='30%' height='70px' align='right'>"+img+"&nbsp;</td>";
+        tabela += "<td width='70%' align='left'>&nbsp;<font class='font_notastam1'>"+localStorage.getItem("login_nome")+"</font></td>";
         tabela += "</tr></table></div>";
     }
     else{
@@ -42,7 +42,7 @@ function view_home(retornos){
         conteudo_lista += "</ons-card>";*/
  if(retornos['murais']){     
     //Preenchendo a lista com cards
-    conteudo_lista = "<br><br>";
+    conteudo_lista = "<br>";
     for(i  in retorno){
 
         conteudo_lista += "<ons-card "+(retorno[i]['url_destino'] ? "class='clicavelhome' valor='"+(retorno[i]['url_destino'])+"'" : (retorno[i]['arquivo'] ? "class='imagemview' imagem='"+(retorno[i]['arquivo'])+"'" : " ")  )+"><font class='font_tam1'><span class='notification notification--material baloes_blue'>&nbsp;&nbsp;"+(retorno[i]['data_inicio'])+"&nbsp;&nbsp;</span>  <font class='font_tam3'>"+(retorno[i]['assunto'])+"</font> </font>";

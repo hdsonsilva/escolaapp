@@ -312,7 +312,7 @@ function montaOptions(dados, tipo){
     let tmp = '';
     if(dados){
         for(i in dados){
-            tmp += "<option value='"+tipo+'_'+dados[i][0]+"'>"+(tipo == 'prof' ? "PROF. ": "")+dados[i][1]+"</option>";
+            tmp += "<option value='"+tipo+'_'+dados[i][0]+"'>"+(tipo == 'prof' ? "Prof. ": "")+dados[i][1]+"</option>";
         }
     }
 

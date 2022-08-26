@@ -240,6 +240,7 @@ function retira_br(texto){
 function buscarMensagensDetalhadas(msgs,tipocontato,codigocontato,docentes){
     let posicao = tipocontato == 'prof' ? 4 : 5 ;
     let dados = new Array() ;
+    $('#mensagensdetalhe').html("<br><br>");
     for(i in msgs){
 
         if(msgs[i][posicao] == codigocontato){

@@ -124,7 +124,16 @@
         3000);
       });
 
-      
+       //Redimensionando o menu do sistema
+      document.addEventListener('deviceready', function () {
+          //Alterando altura da barra de menu do app
+          if(device.platform.toUpperCase() === 'ANDROID'){
+            $('.padding_padrao').height('60px'); 
+          }
+          else{
+            $('.padding_padrao').height('50px');
+          }
+      });
       
       $('#bt_voltar').click(function(){
 

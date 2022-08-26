@@ -93,7 +93,7 @@
 
           $('#periodo_letivo').val(localStorage.getItem('periodoletivo'));
 
-          //Incluindo versao no app
+          //Redimensionando o menu do sistema
           document.addEventListener('deviceready', function () {
             cordova.getAppVersion.getVersionNumber().then(function (version) {
               $('#VersaoSoftware').html("Versão APP "+version);

@@ -87,6 +87,19 @@
       //Em meio segundo  
       setTimeout(function(){
         
+        //Incluindo versao no app
+          document.addEventListener('deviceready', function () {
+        
+              //Alterando altura da barra de menu do app
+              if(device.platform.toUpperCase() === 'ANDROID'){
+                $('.padding_padrao').height('60px'); 
+              }
+              else{
+                $('.padding_padrao').height('50px');
+              }
+
+          });
+
         $('body').height('100%');
 
       }, 500);
@@ -166,7 +179,7 @@
         <div class="naoquebrar calcular" style="height: 40px; " id="tituloApp_" >
           <img src='./img/topo.png'  height="40px" style='vertical-align: bottom;'> 
         </div>
-          </ons-button>
+          
         
       </ons-toolbar>
   <div class=''>

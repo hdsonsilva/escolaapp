@@ -209,7 +209,7 @@ ons-splitter-side[side="left"][animation="overlay"] {
 .font_text{
   font-size: 10pt;
   text-align:justify;
-  color:gray; 
+  color:#373737; 
 }
 .font_pergunta{
   font-size: 13pt;
@@ -225,8 +225,8 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 .positionbottom{
         position: fixed;
-        bottom: 60px;
-        right: 30px;
+        bottom: 100px;
+        right: 20px;
 }
 
 .positionbottomacimamenu{

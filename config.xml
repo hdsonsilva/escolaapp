@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="3.0.00" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+<widget id="io.agenda.liber2" version="3.0.4" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <name>Agenda Escola Líber 2.0</name>
     <description> 
         Aplicativo da Escola Liber. Acompanhe a vida escolar dos seus filhos de onde estiver.
@@ -18,7 +18,7 @@
     <preference name="windows-appx-target" value="8.1-phone" />
     <preference name="WindowsToastCapable" value="true" />
     <preference name="StatusBarOverlaysWebView" value="true" />
-     <preference name="StatusBarBackgroundColor" value="#56C2CD" />
+    <preference name="StatusBarBackgroundColor" value="#56C2CD" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
@@ -40,6 +40,7 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="11.0" />
@@ -49,7 +50,7 @@
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
         <preference name="StatusBarBackgroundColor" value="#56C2CD" />
         <gap:config-file parent="ITSAppUsesNonExemptEncryption" platform="ios">
-            <false/>
+            <false />
         </gap:config-file>
         <config-file overwrite="true" parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
             <string>A camera é usada opcionalmente para incluir foto do estudante em seu perfil</string>

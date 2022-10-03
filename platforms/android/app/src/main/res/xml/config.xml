@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.agenda.liber2" version="3.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
+<widget id="io.agenda.liber2" version="3.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.1" xmlns:gap="http://phonegap.com/ns/1.1">
     <feature name="PhotoViewer">
         <param name="android-package" value="com.sarriaroman.PhotoViewer.PhotoViewer" />
     </feature>
@@ -43,30 +43,31 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <allow-intent href="market:*" />
-    <icon density="ldpi" height="40" src="resources/android/icon/drawable-ldpi-icon.png" width="40" />
-    <icon density="mdpi" height="120" src="resources/android/icon/drawable-mdpi-icon.png" width="120" />
-    <icon density="hdpi" height="152" src="resources/android/icon/drawable-hdpi-icon.png" width="152" />
-    <icon density="xhdpi" height="167" src="resources/android/icon/drawable-xhdpi-icon.png" width="167" />
-    <icon density="xxxhdpi" height="1024" src="resources/android/icon/drawable-xxxhdpi-icon.png" width="1024" />
-    <resource-file src="resources/android/onesignal/res/drawable-mdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="resources/android/onesignal/res/drawable-hdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="resources/android/onesignal/res/drawable-xhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="resources/android/onesignal/res/drawable-xxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxhdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="resources/android/onesignal/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
+    <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
+    <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
+    <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
+    <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+    <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
     <splash density="port-ldpi" src="resources/android/splash/drawable-port-ldpi-screen.png" />
     <splash density="port-mdpi" src="resources/android/splash/drawable-port-mdpi-screen.png" />
     <splash density="port-hdpi" src="resources/android/splash/drawable-port-hdpi-screen.png" />
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+    <resource-file src="resources/android/notification/drawable-mdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png" />
+    <resource-file src="resources/android/notification/drawable-hdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png" />
+    <resource-file src="resources/android/notification/drawable-xhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png" />
+    <resource-file src="resources/android/notification/drawable-xxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxhdpi/ic_stat_onesignal_default.png" />
+    <resource-file src="resources/android/notification/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="phonegap-version" value="cli-10.0.0" />
-    <preference name="android-build-tool" value="gradle" />
-    <preference name="android-minSdkVersion" value="23" />
+    <preference name="android-minSdkVersion" value="28" />
+    <preference name="android-targetSdkVersion" value="30" />
     <preference name="Orientation" value="portrait" />
     <preference name="windows-appx-target" value="8.1-phone" />
     <preference name="WindowsToastCapable" value="true" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#56C2CD" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 </widget>

@@ -6,7 +6,7 @@ function view_academico(retornos){
     //Alterando título do app
     
     $('#tituloApp').html("Notas e Frequência");
-   console.log(retornos);
+   
 if(retornos['notas']){
     conteudo_lista = "<br><br>";
     //Preenchendo a lista com cards

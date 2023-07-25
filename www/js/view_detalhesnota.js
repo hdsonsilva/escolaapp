@@ -6,7 +6,7 @@ function view_detalhesnotas(retornos){
     //Alterando título do app
     
     $('#tituloApp').html("Notas e Frequência");
-   console.log(retornos);
+   
 if(retornos['notas']){
     //Preenchendo a lista com cards
     conteudo_lista = "<br><br>";

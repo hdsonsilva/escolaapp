@@ -24,6 +24,14 @@
         Embarque/<br>Desembarque
       </div>
     </ons-list-item>
+    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="PhotoViewer.show(server+localStorage.getItem('unidade')+'/alunos/carteirinha/emitir-carteirinha?apitoken='+localStorage.getItem('token')+'&periodo_letivo='+localStorage.getItem('periodoletivo'),'',{share:true,closeButton: true,copyToReference: true, headers: '',piccasoOptions: { }});">
+      <div class="left">
+        <ons-icon icon="fa-exchange" style="color: grey;"></ons-icon>
+      </div>
+      <div class="center">
+        Carteirinha<br>Digital
+      </div>
+    </ons-list-item>
   </ons-list>
   <ons-list-title>Usuários</ons-list-title>
   <ons-list id="links">
@@ -61,7 +69,7 @@
         Dados de E-mail
       </div>
     </ons-list-item>
-    <ons-list-title>Links</ons-list-title>
+    <ons-list-title>Outros</ons-list-title>
     <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirNavigator(server+localStorage.getItem('unidade')+'/alunos/mural/ver-avisos', 'forcar')">
       <div class="left"> 
         <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
@@ -70,6 +78,16 @@
         Sistema Web
       </div>
     </ons-list-item>
+    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="abrirNavigator('https://www.liber.g12.br/wp-content/uploads/2023/07/Manual-LIBER.pdf', 'forcar')">
+      <div class="left"> 
+        <ons-icon icon="fa-external-link" style="color: grey;"></ons-icon>
+      </div>
+      <div class="center">
+        Manual da Agenda
+      </div>
+    </ons-list-item>
+
+
     
    
 

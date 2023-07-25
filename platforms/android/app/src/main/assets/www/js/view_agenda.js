@@ -6,7 +6,7 @@ function view_agenda(retornos){
     var conteudobotao = '';
     var imagem_view = '';
      //Alterando título do appc
-     console.log(retornos);
+     
     $('#tituloApp').html("Agenda");
     //Preenchendo a lista com cards
 

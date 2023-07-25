@@ -47,6 +47,10 @@
             {
               "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"PDFViewer\"><param name=\"android-package\" value=\"com.q4websystems.plugin.PDFViewer\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -78,11 +82,11 @@
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 2
+              "count": 3
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
@@ -114,6 +118,10 @@
             },
             {
               "xml": "<uses-permission android:name=\"io.agenda.liber2.permission.RECEIVE_ADM_MESSAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
               "count": 1
             }
           ],
@@ -163,6 +171,9 @@
       "PACKAGE_NAME": "io.agenda.liber2"
     },
     "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.agenda.liber2"
+    },
+    "cordova-plugin-pdf-viewer": {
       "PACKAGE_NAME": "io.agenda.liber2"
     }
   },
@@ -245,6 +256,14 @@
       "clobbers": [
         "window.StatusBar"
       ]
+    },
+    {
+      "id": "cordova-plugin-pdf-viewer.PDFViewer",
+      "file": "plugins/cordova-plugin-pdf-viewer/www/pdfviewer.js",
+      "pluginId": "cordova-plugin-pdf-viewer",
+      "clobbers": [
+        "PDFViewer"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -256,6 +275,7 @@
     "cordova-plugin-splashscreen": "6.0.0",
     "onesignal-cordova-plugin": "2.11.4",
     "cordova-plugin-app-version": "0.1.14",
-    "cordova-plugin-statusbar": "3.0.0"
+    "cordova-plugin-statusbar": "3.0.0",
+    "cordova-plugin-pdf-viewer": "0.0.1"
   }
 }

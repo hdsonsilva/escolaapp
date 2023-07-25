@@ -77,6 +77,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "window.StatusBar"
       ]
+    },
+    {
+      "id": "cordova-plugin-pdf-viewer.PDFViewer",
+      "file": "plugins/cordova-plugin-pdf-viewer/www/pdfviewer.js",
+      "pluginId": "cordova-plugin-pdf-viewer",
+      "clobbers": [
+        "PDFViewer"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -88,6 +96,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-splashscreen": "6.0.0",
     "onesignal-cordova-plugin": "2.11.4",
     "cordova-plugin-app-version": "0.1.14",
-    "cordova-plugin-statusbar": "3.0.0"
+    "cordova-plugin-statusbar": "3.0.0",
+    "cordova-plugin-pdf-viewer": "0.0.1"
   };
 });

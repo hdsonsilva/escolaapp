@@ -19,7 +19,7 @@ function view_bilhetes(retornos){
         //Preenchendo a lista com cards
         conteudo_lista = "<br><br>";
         for(i  in retorno){
-            console.log(retorno);
+            
 
             conteudo_lista += mensagemAgrupada(retorno[i]);
         }
@@ -227,13 +227,17 @@ function retira_br(texto){
  
     
         
-        let ocorrencias = (texto.match(/<br>/g) || []).length;
+       if(texto){ 
+            let ocorrencias = (texto.match(/<br>/g) || []).length;
+        
+            for(i = 0 ; i < ocorrencias; i++){
+               texto = texto.replace("<br>"," ");
+            }
+        
     
-        for(i = 0 ; i < ocorrencias; i++){
-           texto = texto.replace("<br>"," ");
+            return texto;
         }
-    
-    return texto;
+        return '';
 }
 
 

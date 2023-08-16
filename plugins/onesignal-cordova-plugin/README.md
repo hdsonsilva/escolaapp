@@ -7,7 +7,7 @@
 
 ---
 
-[OneSignal](https://onesignal.com/) is a free push notification service for mobile apps. This plugin makes it easy to integrate your [Cordova](http://cordova.apache.org/) based (e.g. [Ionic](http://ionicframework.com/), [PhoneGap](https://phonegap.com/), and PhoneGap Build app with OneSignal. 
+[OneSignal](https://onesignal.com/) is a free email, sms, push notification, and in-app message service for mobile apps. This plugin makes it easy to integrate your [Cordova](http://cordova.apache.org/) based (e.g. [Ionic](http://ionicframework.com/), [PhoneGap](https://phonegap.com/), and PhoneGap Build app with OneSignal. 
 
 <p align="center"><img src="https://app.onesignal.com/images/android_and_ios_notification_image.gif" width="500" alt="Cordova Notification"></p>
 
@@ -15,11 +15,9 @@
 See the [Documentation](https://documentation.onesignal.com/docs) for installation and setup instructions:
 - Cordova: https://documentation.onesignal.com/docs/cordova-sdk-setup
 - Ionic: https://documentation.onesignal.com/docs/ionic-sdk-setup
-- Phonegap: https://documentation.onesignal.com/docs/phonegap-sdk-setup
-- Intel XDK: https://documentation.onesignal.com/docs/intel-xdk-setup
 
 #### API
-See OneSignal's [Cordova SDK API](https://documentation.onesignal.com/docs/cordova-sdk) page for a list of all available methods.
+See OneSignal's [Client SDK Reference](https://documentation.onesignal.com/docs/sdk-reference) page for a list of all available methods.
 
 #### Change Log
 See this repository's [release tags](https://github.com/OneSignal/OneSignal-Cordova-SDK/releases) for a complete change log of every released version.
@@ -33,5 +31,5 @@ To make things easier, we have published demo projects for [Cordova](https://git
 
 #### Supports:
 * Cordova, Ionic, Ionic Capacitor, and Phonegap
-* Android 4.0.3 (API Level 15) through 10 (API Level 29), and Amazon FireOS
-* iOS 7 - 13
+* Android 4.1 (API Level 16) through 12 (API Level 31), and Amazon FireOS
+* iOS 9 - 15

@@ -1,8 +1,8 @@
 {
   "_from": "onesignal-cordova-plugin",
-  "_id": "onesignal-cordova-plugin@2.11.4",
+  "_id": "onesignal-cordova-plugin@3.3.1",
   "_inBundle": false,
-  "_integrity": "sha512-Iy0u65XK/gXj4U/82prOOcNZMKm415FThhxqMY4epJcW11EjdMIm33DQr1MDnV9s3UjZcgTZ4DIlhLEoLGR05w==",
+  "_integrity": "sha512-MAAZA1QALwHdVIw3ASVTUsna7XEKVZ5y7QEitJ0oFX7246l7nQhZIvyHyG9l7A6CQdcdW48H6nLT6izCNROB4g==",
   "_location": "/onesignal-cordova-plugin",
   "_phantomChildren": {},
   "_requested": {
@@ -19,8 +19,8 @@
     "#DEV:/",
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-2.11.4.tgz",
-  "_shasum": "2d90396312045c11d2123fbe855c802b1fa411e2",
+  "_resolved": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-3.3.1.tgz",
+  "_shasum": "97c8fe3f3ad180d784ff689b21212ab8f97bb25c",
   "_spec": "onesignal-cordova-plugin",
   "_where": "/var/www/agendaescolarLiber",
   "author": {
@@ -35,7 +35,6 @@
     "platforms": [
       "android",
       "ios",
-      "windows",
       "amazon-fireos"
     ]
   },
@@ -81,16 +80,21 @@
     "cordova-amazon-fireos"
   ],
   "license": "MIT",
+  "main": "dist/index.js",
   "name": "onesignal-cordova-plugin",
   "platforms": [
     "android",
     "ios",
-    "windows",
     "amazon-fireos"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onesignal/OneSignal-Cordova-SDK.git"
   },
-  "version": "2.11.4"
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn run build"
+  },
+  "types": "dist/index.d.ts",
+  "version": "3.3.1"
 }

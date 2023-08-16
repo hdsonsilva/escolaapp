@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "com-sarriaroman-photoviewer.PhotoViewer",
-      "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
-      "pluginId": "com-sarriaroman-photoviewer",
+      "id": "cordova-plugin-app-version.AppVersionPlugin",
+      "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+      "pluginId": "cordova-plugin-app-version",
       "clobbers": [
-        "PhotoViewer"
+        "cordova.getAppVersion"
       ]
     },
     {
@@ -47,27 +47,19 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-pdf-viewer.PDFViewer",
+      "file": "plugins/cordova-plugin-pdf-viewer/www/pdfviewer.js",
+      "pluginId": "cordova-plugin-pdf-viewer",
+      "clobbers": [
+        "PDFViewer"
+      ]
+    },
+    {
       "id": "cordova-plugin-splashscreen.SplashScreen",
       "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
       "pluginId": "cordova-plugin-splashscreen",
       "clobbers": [
         "navigator.splashscreen"
-      ]
-    },
-    {
-      "id": "onesignal-cordova-plugin.OneSignal",
-      "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
-      "pluginId": "onesignal-cordova-plugin",
-      "clobbers": [
-        "OneSignal"
-      ]
-    },
-    {
-      "id": "cordova-plugin-app-version.AppVersionPlugin",
-      "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
-      "pluginId": "cordova-plugin-app-version",
-      "clobbers": [
-        "cordova.getAppVersion"
       ]
     },
     {
@@ -79,24 +71,47 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-pdf-viewer.PDFViewer",
-      "file": "plugins/cordova-plugin-pdf-viewer/www/pdfviewer.js",
-      "pluginId": "cordova-plugin-pdf-viewer",
+      "id": "com-sarriaroman-photoviewer.PhotoViewer",
+      "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
+      "pluginId": "com-sarriaroman-photoviewer",
       "clobbers": [
-        "PDFViewer"
+        "PhotoViewer"
       ]
+    },
+    {
+      "id": "onesignal-cordova-plugin.OneSignalPlugin",
+      "file": "plugins/onesignal-cordova-plugin/dist/index.js",
+      "pluginId": "onesignal-cordova-plugin",
+      "clobbers": [
+        "OneSignal"
+      ]
+    },
+    {
+      "id": "onesignal-cordova-plugin.NotificationReceivedEvent",
+      "file": "plugins/onesignal-cordova-plugin/dist/NotificationReceivedEvent.js",
+      "pluginId": "onesignal-cordova-plugin"
+    },
+    {
+      "id": "onesignal-cordova-plugin.Subscription",
+      "file": "plugins/onesignal-cordova-plugin/dist/Subscription.js",
+      "pluginId": "onesignal-cordova-plugin"
+    },
+    {
+      "id": "onesignal-cordova-plugin.OSNotification",
+      "file": "plugins/onesignal-cordova-plugin/dist/OSNotification.js",
+      "pluginId": "onesignal-cordova-plugin"
     }
   ];
   module.exports.metadata = {
-    "com-sarriaroman-photoviewer": "1.2.4",
+    "cordova-plugin-app-version": "0.1.14",
     "cordova-plugin-camera-preview": "0.12.3",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-pdf-viewer": "0.0.1",
     "cordova-plugin-splashscreen": "6.0.0",
-    "onesignal-cordova-plugin": "2.11.4",
-    "cordova-plugin-app-version": "0.1.14",
     "cordova-plugin-statusbar": "3.0.0",
-    "cordova-plugin-pdf-viewer": "0.0.1"
+    "com-sarriaroman-photoviewer": "1.3.0",
+    "onesignal-cordova-plugin": "3.3.1"
   };
 });

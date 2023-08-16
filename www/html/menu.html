@@ -18,10 +18,18 @@
     </ons-list-item>
     <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="PhotoViewer.show(server+localStorage.getItem('unidade')+'/alunos/carteirinha/emitir-carteirinha?apitoken='+localStorage.getItem('token')+'&periodo_letivo='+localStorage.getItem('periodoletivo'),'',{share:true,closeButton: true,copyToReference: true, headers: '',piccasoOptions: { }});">
       <div class="left">
-        <ons-icon icon="fa-exchange" style="color: grey;"></ons-icon>
+        <ons-icon icon="fa-credit-card" style="color: grey;"></ons-icon>
       </div>
       <div class="center">
         Carteirinha<br>Digital
+      </div>
+    </ons-list-item>
+    <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="direcionar('./html/page_ocorrencias.html')">
+      <div class="left">
+        <ons-icon icon="fa-exclamation-triangle" style="color: grey;"></ons-icon>
+      </div>
+      <div class="center">
+        Ocorrências
       </div>
     </ons-list-item>
     <ons-list-item tappable="" style="cursor:pointer;" modifier="longdivider chevron" onclick="direcionar('./html/page_levaetras.html')">

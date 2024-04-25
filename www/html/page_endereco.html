@@ -95,7 +95,14 @@
         500);
       
       if(localStorage.getItem('unidade') == 'col_liber_ctga'){
-        $('#enderecounidade').html("Rua João Pinheiro, 147 - Centro<br>Caratinga/MG<br>35300-037<br><br>Telefone: <a href='tel:03333226232'>(33) 3322-6232</a>"  );
+        $('#enderecounidade').html("Rua João Pinheiro, 147 - Centro<br>Caratinga/MG<br>35300-037<br><br>Telefone: <br><a href='tel:+553333226232'>(33) 3322-6232</a><br><a href='tel:+5533999850598'>(33) 99985-0598 </a>"  );
+
+
+        $('#enderecounidademapa').attr('src',"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608.5700079578193!2d-42.14323490032195!3d-19.79027014904872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xba91b6e78223d7%3A0xefa1c4ff2d1c8ed6!2sEscola%20L%C3%ADber!5e0!3m2!1spt-BR!2sbr!4v1663179265145!5m2!1spt-BR!2sbr");
+      }
+
+      if(localStorage.getItem('unidade') == 'col_ctga'){
+        $('#enderecounidade').html("Rua João Pinheiro, 147 - Centro<br>Caratinga/MG<br>35300-037<br><br>Telefone: <br><a href='tel:+553333226232'>(33) 3322-6232</a><br><a href='tel:+5533999850598'>(33) 99985-0598 </a>"  );
 
         $('#enderecounidademapa').attr('src',"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608.5700079578193!2d-42.14323490032195!3d-19.79027014904872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xba91b6e78223d7%3A0xefa1c4ff2d1c8ed6!2sEscola%20L%C3%ADber!5e0!3m2!1spt-BR!2sbr!4v1663179265145!5m2!1spt-BR!2sbr");
       }
